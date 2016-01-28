@@ -3,18 +3,23 @@
     var currState = null;
 
     //currState = engine.takeTurn(currState,0);
-    function updateState() {
+    function updateState(n) {
 
         if (currState === null){
             currState = engine.initialState;
         } else {
-            currState = engine.takeTurn(currState, 0 );
+            console.log(currState);
+            currState = engine.takeTurn(currState, n );
         }
 
-        if (typeof(currState.turn.context) !== 'undefined' &&
-            typeof(currState.turn.options) !== 'undefined')
-            updateView(currState.turn.context,
-                currState.turn.options);
+        if (currState.turn !== null) {
+            updateView( currState.turn.context,
+                        currState.turn.options);
+        } else {
+            if (typeof currState.ending !== 'undefined'){
+                endGame(currState.ending.vitals);
+            }
+        }
     }
     updateState();
 
@@ -23,13 +28,10 @@
 
         var $newCard = $('#mainCard').clone()
             .attr('id','newCard')
+            .attr('style', '')
             .appendTo( $('body') )
-            .css('position', 'absolute')
-            .css('top', '1em')
-            .css('left', '100%')
-            .animate({left: '1em'}, 500, function() {
-
-
+            .show()
+            .transition({left: '0'}, 500, function() {
                 $('#mainCard').remove();
                 $newCard.attr('id','mainCard')
                     .css('position','static');
@@ -68,9 +70,8 @@
            $aList.append(
                 $('<li>').html(option.label)
                     .on('click', function() {
-                       console.log('click!' + n)
-                        animate();
-                        updateState();
+                        //animate();
+                        updateState(n);
                     })
            );
         });
@@ -78,9 +79,47 @@
 
     }
 
-    function animate() {
-        var $question = $('#question');
-        var $answer = $('#answer');
+    function endGame(vitals){
+        var $endCard = $('<main>')
+            .addClass('gameOver')
+            .append( $('<section>')
+                .append( $('<header>').html('Thank you for playing!'))
+                .append( $('<article>').html(makeEndText(vitals)))
+
+            )
+            .transition({left: '0'}, 500, function() {
+                $('#mainCard').remove();
+            })
+            .appendTo( $('body') );
+    }
+
+    function makeEndText(vitals){
+        var txt = "";
+
+        var vital;
+        var won = false;
+
+        Object.keys(vitals).forEach(function(n) {
+
+            vital = vitals[n];
+
+            if (typeof vital.win !== 'undefined')
+                if (vital.win)
+                    won = true;
+        });
+
+        if (won) {
+            txt += "<h1>You've won!</h1>";
+        } else {
+            txt += "<h1>You've lost!</h1>";
+        }
+
+        txt += "<p>Your score is:</p>";
+        txt += vitals.peacefulProtest.value + " peacefulProtest<br>";
+        txt += vitals.protestSuccess.value + " protestSuccess<br>";
+
+        return txt;
+
     }
 
 

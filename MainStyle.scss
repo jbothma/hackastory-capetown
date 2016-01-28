@@ -15,31 +15,42 @@ $font-stack-bold:    FiraSans-ExtraBold, Helvetica, sans-serif;
 $font-size-regular: 100%;
 $font-size-bigger: 1.5rem;
 $font-size-huge: 3rem;
-$primary-color: .333;
+$primary-color: #333;
 
 html, main, body, section, article, figure, figcaption, ol {
   width: 100%;
   box-sizing: border-box;
 }
 
+html, body {
+  background-color: #ccc !important;
+}
+
 body {
   font: 100% $font-stack-regular;
   color: $primary-color;
-  padding: 1em;
-  background-color: #ccc;
+  position: relative;
+}
+
+main {
+  position: absolute;
+  left: 100%;
+  transition: left 0.5s ease;
+  border: 1em solid transparent;
 }
 
 section {
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 1em;
+  box-shadow: -2px 2px 2px #bbb;
 
   header {
     border-radius: 10px 10px 0 0;
     padding: 1rem;
     padding-right: 1em;
     color: #fff;
-    background-color: #f00;
+    background-color: #31409d;
     font-family: $font-stack-bold;
 
     &:before {
@@ -63,6 +74,7 @@ section {
   }
   .questionMedia {
     text-align: center;
+    padding-bottom: 1em;
 
     img {
       height: 300px;

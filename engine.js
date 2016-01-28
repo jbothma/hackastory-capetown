@@ -58,7 +58,7 @@ engine = {
             })
         });
         if (state.ending === null) {
-            state.turn = turns[Math.round(Math.random(turns.length))];
+            state.turn = turns[Math.round(Math.random()*turns.length)];
         } else {
             state.turn = null;
         }
