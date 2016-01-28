@@ -1,42 +1,50 @@
 engine = {
 
-    "initialState": {
-        "vitals": {
-            "peacefulProtest" : 100,
-            "legality": 100,
-            "policeDeath": 0,
-            "protestSuccess": 0
+    initialState: {
+        vitals: {
+            peacefulProtest : 100,
+            legality: 100,
+            policeDeath: 0,
+            protestSuccess: 0
         },
         nextTurn: initialTurn,
         ending: null
     },
 
-    "endings": [
+    endings: [
         {
-            "field": {
-                "peacefulProtest": {
-                    "cmp": "lte",
-                    "value": 0
+            field: {
+                peacefulProtest: {
+                    cmp: "lte",
+                    value: 0
                 },
-                "win": false
+                win: false
             }
         },
         {
-            "field": {
-                "protestSuccess": {
-                    "cmp": "gte",
-                    "value": 100
+            field: {
+                protestSuccess: {
+                    cmp: "gte",
+                    value: 100
                 },
-                "win": true
+                win: true
             }
         }
     ],
 
+    applyChoice: function(state, optionId) {
+        return state;
+    },
 
-    "takeTurn": function(state, optionId) {
-        state.vitals.peacefulProtest = 0;
-        state.nextTurn = null;
-        state.ending = this.endings[0];
+    transition: function(state) {
+        state.nextTurn = turns[Math.round(Math.random(turns.length))];
+        state.ending = null;
+        return state;
+    },
+
+    takeTurn: function(state, optionId) {
+        state = this.applyChoice(state, optionId);
+        state = this.transition(state);
         return state
     }
 }
