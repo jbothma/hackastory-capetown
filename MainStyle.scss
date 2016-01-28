@@ -1,0 +1,62 @@
+@import 'sanitize.scss';
+
+@font-face {
+  font-family: FiraSans-Regular;
+  src: url(media/fonts/fira-sans/FiraSans-Regular.ttf);
+}
+
+$font-stack:    FiraSans-Regular, Helvetica, sans-serif;
+$font-size-regular: 100%;
+$font-size-huge: 3rem;
+$primary-color: #333;
+
+html, body, section, article, figure, figcaption, img, ol {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+
+}
+
+section {
+  border-radius: 10px;
+  border: 1px solid #BADA55;
+  margin: 1em;
+  padding: 1em;
+
+  #questionMedia {
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+      font-style: italic;
+      text-align: center;
+      width: 100%;
+      padding-top: 1em;
+    }
+  }
+
+  #questionText {
+    margin: 2em 0;
+  }
+
+  #answerChoices {
+    list-style-type: none;
+    counter-reset: ol-counter;
+
+    li:before {
+      content: counter(ol-counter);
+      counter-increment: ol-counter;
+    }
+  }
+}
+
+header {
+  font-size: $font-size-huge;
+  font-weight: bold;
+}
