@@ -38,5 +38,11 @@ engine = {
         state.nextTurn = null;
         state.ending = this.endings[0];
         return state
+    },
+
+    "check": function() {
+        console.log("Hello World!");
+        console.log(this);
+        console.log("-------------")
     }
 }
