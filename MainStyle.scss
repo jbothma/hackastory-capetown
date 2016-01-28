@@ -15,9 +15,9 @@ $font-stack-bold:    FiraSans-ExtraBold, Helvetica, sans-serif;
 $font-size-regular: 100%;
 $font-size-bigger: 1.5rem;
 $font-size-huge: 3rem;
-$primary-color: #333;
+$primary-color: .333;
 
-html, main, body, section, article, figure, figcaption, img, ol {
+html, main, body, section, article, figure, figcaption, ol {
   width: 100%;
   box-sizing: border-box;
 }
@@ -50,21 +50,23 @@ section {
 
   }
 
-  &#question header:before {
+  &.question header:before {
     content: "?";
   }
 
-  &#answer header:before {
+  &.answer header:before {
     content: "!";
   }
 
   article {
     padding: 1em;
   }
-  #questionMedia {
+  .questionMedia {
+    text-align: center;
 
     img {
-      max-height: 300px;
+      height: 300px;
+      max-width: 100%;
     }
 
     figcaption {
@@ -74,7 +76,7 @@ section {
     }
   }
 
-  #answerList {
+  .answerList {
     list-style-type: none;
     counter-reset: ol-counter;
 
@@ -83,7 +85,9 @@ section {
       padding-left: 5em;
       padding-bottom: 1em;
       min-height: 5em;
+      cursor: pointer;
     }
+
 
     li:before {
       content: counter(ol-counter, upper-alpha);

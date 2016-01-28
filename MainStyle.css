@@ -198,13 +198,13 @@ textarea {
 @font-face {
   font-family: FiraSans-ExtraBold;
   src: url(media/fonts/fira-sans/FiraSans-ExtraBold.ttf); }
-html, main, body, section, article, figure, figcaption, img, ol {
+html, main, body, section, article, figure, figcaption, ol {
   width: 100%;
   box-sizing: border-box; }
 
 body {
   font: 100% FiraSans-Regular, Helvetica, sans-serif;
-  color: #333;
+  color: 0.333;
   padding: 1em;
   background-color: #ccc; }
 
@@ -223,27 +223,31 @@ section {
       padding-right: 0.5em;
       font-size: 1.5rem;
       vertical-align: middle; }
-  section#question header:before {
+  section.question header:before {
     content: "?"; }
-  section#answer header:before {
+  section.answer header:before {
     content: "!"; }
   section article {
     padding: 1em; }
-  section #questionMedia img {
-    max-height: 300px; }
-  section #questionMedia figcaption {
-    font-style: italic;
-    text-align: center;
-    padding: 1em 0em; }
-  section #answerList {
+  section .questionMedia {
+    text-align: center; }
+    section .questionMedia img {
+      height: 300px;
+      max-width: 100%; }
+    section .questionMedia figcaption {
+      font-style: italic;
+      text-align: center;
+      padding: 1em 0em; }
+  section .answerList {
     list-style-type: none;
     counter-reset: ol-counter; }
-    section #answerList li {
+    section .answerList li {
       position: relative;
       padding-left: 5em;
       padding-bottom: 1em;
-      min-height: 5em; }
-    section #answerList li:before {
+      min-height: 5em;
+      cursor: pointer; }
+    section .answerList li:before {
       content: counter(ol-counter,upper-alpha);
       counter-increment: ol-counter;
       text-align: center;
