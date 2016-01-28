@@ -7,6 +7,7 @@ engine = {
             policeDeath: 0,
             protestSuccess: 0
         },
+        previousTurn: null,
         turn: initialTurn,
         ending: null
     },
@@ -45,7 +46,7 @@ engine = {
     },
 
     getTurns: function(state) {
-        return turns.filter(function(turn) {
+        var relevantTurns = turns.filter(function(turn) {
             var include = true;
             Object.keys(turn.triggerLimits).forEach(function(vital) {
                 var currentVital = state.vitals[vital];
@@ -57,6 +58,14 @@ engine = {
             })
             return include;
         });
+        console.log(relevantTurns.length);
+        if (relevantTurns.length > 1) {
+            relevantTurns = relevantTurns.filter(function(turn) {
+                return turn != state.previousTurn;
+            })
+        };
+        console.log(relevantTurns.length);
+        return relevantTurns;
     },
 
     transition: function(state) {
@@ -72,9 +81,11 @@ engine = {
                 }
             })
         });
+        state.previousTurn = state.turn;
         if (state.ending === null) {
             var turns = this.getTurns(state);
-            state.turn = turns[Math.floor(Math.random())];
+            var idx = Math.round(Math.random()*(turns.length-1));
+            state.turn = turns[idx];
         } else {
             state.turn = null;
         }
