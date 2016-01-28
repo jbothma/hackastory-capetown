@@ -41,7 +41,7 @@ turns = [
             1: {
                 "label": "Shoot them all",
                 "vitalsDeltas": {
-                    "peacefulProtest" : 0,
+                    "peacefulProtest" : -20,
                     "legality": -50,
                     "policeDeath": 0
                 }
@@ -51,7 +51,8 @@ turns = [
                 "vitalsDeltas": {
                     "peacefulProtest" : 5,
                     "legality": 0,
-                    "policeDeath": 0
+                    "policeDeath": 0,
+                    "protestSuccess": 10
                 }
             }
         }
@@ -69,7 +70,7 @@ turns = [
             1: {
                 "label": "Throw stones back",
                 "vitalsDeltas": {
-                    "peacefulProtest" : 0,
+                    "peacefulProtest" : -20,
                     "legality": -20,
                     "policeDeath": 0
                 }
@@ -79,7 +80,8 @@ turns = [
                 "vitalsDeltas": {
                     "peacefulProtest" : 5,
                     "legality": 0,
-                    "policeDeath": 0
+                    "policeDeath": 0,
+                    "protestSuccess": 10
                 }
             }
         }

@@ -13,21 +13,21 @@ engine = {
 
     endings: [
         {
-            field: {
+            vitals: {
                 peacefulProtest: {
                     cmp: "lte",
-                    value: 0
+                    value: 0,
+                    win: false
                 },
-                win: false
             }
         },
         {
-            field: {
+            vitals: {
                 protestSuccess: {
                     cmp: "gte",
-                    value: 100
+                    value: 100,
+                    win: true
                 },
-                win: true
             }
         }
     ],
@@ -45,8 +45,23 @@ engine = {
     },
 
     transition: function(state) {
-        state.turn = turns[Math.round(Math.random(turns.length))];
-        state.ending = null;
+        this.endings.forEach(function(ending) {
+            Object.keys(ending.vitals).forEach(function(vital) {
+                var comparison = ending.vitals[vital].cmp;
+                var currentVital = state.vitals[vital];
+                var threshold = ending.vitals[vital].value;
+                if ((comparison === "lte") && (currentVital <= threshold)) {
+                    state.ending = ending;
+                } else if ((comparison === "gte") && (currentVital >= threshold)) {
+                    state.ending = ending;
+                }
+            })
+        });
+        if (state.ending === null) {
+            state.turn = turns[Math.round(Math.random(turns.length))];
+        } else {
+            state.turn = null;
+        }
         return state;
     },
 
