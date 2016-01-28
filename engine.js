@@ -33,6 +33,14 @@ engine = {
     ],
 
     applyChoice: function(state, optionId) {
+        Object.keys(state.vitals).forEach(function(vital) {
+            var delta = 0;
+            if (vital in state.nextTurn.options[optionId].vitalsDeltas) {
+                delta = state.nextTurn.options[optionId].vitalsDeltas[vital];
+            }
+
+            state.vitals[vital] = state.vitals[vital] + delta;
+        });
         return state;
     },
 

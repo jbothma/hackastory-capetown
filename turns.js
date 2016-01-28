@@ -7,8 +7,8 @@ initialTurn = {
         }
     },
     "triggerLimits": [],
-    "options": [
-        {
+    "options": {
+        1: {
             "label": "Shoot them all",
             "vitalsDeltas": {
                 "peacefulProtest" : 0,
@@ -16,7 +16,7 @@ initialTurn = {
                 "policeDeath": 0
             }
         },
-        {
+        2: {
             "label": "Leave them be",
             "vitalsDeltas": {
                 "peacefulProtest" : 5,
@@ -24,7 +24,7 @@ initialTurn = {
                 "policeDeath": 0
             }
         }
-    ]
+    }
 }
 
 turns = [
