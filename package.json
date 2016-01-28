@@ -1,0 +1,9 @@
+{
+  "name": "spot-the-cop",
+  "repository": "https://github.com/hansvana/hackastory-capetown",
+  "version": "1.0.0",
+  "description": "Spot the cop!",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
