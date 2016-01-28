@@ -7,7 +7,7 @@ engine = {
             policeDeath: 0,
             protestSuccess: 0
         },
-        nextTurn: initialTurn,
+        turn: initialTurn,
         ending: null
     },
 
@@ -35,8 +35,8 @@ engine = {
     applyChoice: function(state, optionId) {
         Object.keys(state.vitals).forEach(function(vital) {
             var delta = 0;
-            if (vital in state.nextTurn.options[optionId].vitalsDeltas) {
-                delta = state.nextTurn.options[optionId].vitalsDeltas[vital];
+            if (vital in state.turn.options[optionId].vitalsDeltas) {
+                delta = state.turn.options[optionId].vitalsDeltas[vital];
             }
 
             state.vitals[vital] = state.vitals[vital] + delta;
@@ -45,7 +45,7 @@ engine = {
     },
 
     transition: function(state) {
-        state.nextTurn = turns[Math.round(Math.random(turns.length))];
+        state.turn = turns[Math.round(Math.random(turns.length))];
         state.ending = null;
         return state;
     },
