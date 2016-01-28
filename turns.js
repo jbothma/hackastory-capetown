@@ -1,5 +1,11 @@
 initialTurn = {
-    "context": "a protest is starting",
+    "context": {
+        "text" : "a protest is starting",
+        "media" : {
+            "type": "image",
+            "url": "media/blue-macaw-bird.jpg"
+        }
+    },
     "triggerLimits": [],
     "options": [
         {
@@ -23,7 +29,13 @@ initialTurn = {
 
 turns = [
     {
-        "context": "The crowd get near the mayor's office",
+        "context": {
+            "text" : "the crowd gets near the mayor's office",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
         "triggerLimits": [],
         "options": {
             1: {
@@ -45,7 +57,13 @@ turns = [
         }
     },
     {
-        "context": "The crowd start throwing stones",
+        "context": {
+            "text" : "the crowd starts throwing stones",
+            "media" : {
+                "type": "image",
+                "url": "media/rainbow.jpg"
+            }
+        },
         "triggerLimits": [],
         "options": {
             1: {
