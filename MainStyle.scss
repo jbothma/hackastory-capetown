@@ -63,6 +63,10 @@ section {
   }
   #questionMedia {
 
+    img {
+      max-height: 300px;
+    }
+
     figcaption {
       font-style: italic;
       text-align: center;
@@ -70,7 +74,7 @@ section {
     }
   }
 
-  #answerChoices {
+  #answerList {
     list-style-type: none;
     counter-reset: ol-counter;
 

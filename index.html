@@ -5,11 +5,6 @@
     <title>Spot the cop!</title>
     <link rel="stylesheet" href="MainStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="application/javascript" src="jquery-1.12.0.min.js"></script>
-    <script type="application/javascript" src="turns.js"></script>
-    <script type="application/javascript" src="engine.js"></script>
-    <script type="application/javascript" src="view.js"></script>
-
 </head>
 <body>
     <main>
@@ -20,7 +15,7 @@
                     <img src="media/blue-macaw-bird.jpg">
                     <figcaption>A caption, if needed.</figcaption>
                 </figure>
-                <p>
+                <p id="questionText">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
                     ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
                     mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
@@ -31,7 +26,7 @@
         <section id="answer">
             <header>The Choice</header>
             <article>
-                <ol id="answerChoices">
+                <ol id="answerList">
                     <li>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
                         ante dapibus diam.
@@ -52,5 +47,10 @@
             </article>
         </section>
     </main>
+
+    <script type="application/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="application/javascript" src="turns.js"></script>
+    <script type="application/javascript" src="engine.js"></script>
+    <script type="application/javascript" src="view.js"></script>
 </body>
 </html>

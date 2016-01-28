@@ -229,19 +229,21 @@ section {
     content: "!"; }
   section article {
     padding: 1em; }
+  section #questionMedia img {
+    max-height: 300px; }
   section #questionMedia figcaption {
     font-style: italic;
     text-align: center;
     padding: 1em 0em; }
-  section #answerChoices {
+  section #answerList {
     list-style-type: none;
     counter-reset: ol-counter; }
-    section #answerChoices li {
+    section #answerList li {
       position: relative;
       padding-left: 5em;
       padding-bottom: 1em;
       min-height: 5em; }
-    section #answerChoices li:before {
+    section #answerList li:before {
       content: counter(ol-counter,upper-alpha);
       counter-increment: ol-counter;
       text-align: center;
