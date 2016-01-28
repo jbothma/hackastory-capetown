@@ -8,9 +8,10 @@
         if (currState === null){
             currState = engine.initialState;
         } else {
-            console.log(currState);
             currState = engine.takeTurn(currState, n );
         }
+
+        console.log(currState);
 
         if (currState.turn !== null) {
             updateView( currState.turn.context,
@@ -24,7 +25,6 @@
     updateState();
 
     function updateView(context, options) {
-        console.log(context, options);
 
         var $newCard = $('#mainCard').clone()
             .attr('id','newCard')
@@ -40,8 +40,6 @@
         var $qText = $newCard.find('.questionText');
         var $qMedia = $newCard.find('.questionMedia');
         var $aList = $newCard.find('.answerList');
-
-        console.log($qText, $qMedia, $aList);
         // SET DESCRIPTION TEXT
 
         if (typeof(context.text) !== 'undefined')
