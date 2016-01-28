@@ -7,10 +7,11 @@
 
 $font-stack:    FiraSans-Regular, Helvetica, sans-serif;
 $font-size-regular: 100%;
+$font-size-bigger: 2rem;
 $font-size-huge: 3rem;
 $primary-color: #333;
 
-html, body, section, article, figure, figcaption, img, ol {
+html, main, body, section, article, figure, figcaption, img, ol {
   width: 100%;
   box-sizing: border-box;
 }
@@ -18,25 +19,20 @@ html, body, section, article, figure, figcaption, img, ol {
 body {
   font: 100% $font-stack;
   color: $primary-color;
-
+  padding: 1em;
 }
 
 section {
   border-radius: 10px;
   border: 1px solid #BADA55;
-  margin: 1em;
+  margin-bottom: 1em;
   padding: 1em;
 
   #questionMedia {
 
-    img {
-        width: 100%;
-    }
-
     figcaption {
       font-style: italic;
       text-align: center;
-      width: 100%;
       padding-top: 1em;
     }
   }
@@ -49,9 +45,31 @@ section {
     list-style-type: none;
     counter-reset: ol-counter;
 
+    li {
+      position: relative;
+      padding-left: 5em;
+      padding-bottom: 1em;
+      min-height: 5em;
+    }
+
     li:before {
-      content: counter(ol-counter);
+      content: counter(ol-counter, upper-alpha);
       counter-increment: ol-counter;
+      text-align: center;
+      padding-top: 0.4em;
+      font-size: $font-size-bigger;
+      font-weight: bold;
+      color: #fff;
+
+      position: absolute;
+      left: 0;
+
+      background-color: #BADA55;
+      border-radius: 50%;
+      border: 2px solid #B3D4FC;
+      width: 2em;
+      height: 2em;
+
     }
   }
 }
@@ -59,4 +77,5 @@ section {
 header {
   font-size: $font-size-huge;
   font-weight: bold;
+  margin-bottom: 0.5em;
 }

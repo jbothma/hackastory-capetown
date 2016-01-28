@@ -195,37 +195,53 @@ textarea {
 @font-face {
   font-family: FiraSans-Regular;
   src: url(media/fonts/fira-sans/FiraSans-Regular.ttf); }
-html, body, section, article, figure, figcaption, img, ol {
+html, main, body, section, article, figure, figcaption, img, ol {
   width: 100%;
   box-sizing: border-box; }
 
 body {
   font: 100% FiraSans-Regular, Helvetica, sans-serif;
-  color: #333; }
+  color: #333;
+  padding: 1em; }
 
 section {
   border-radius: 10px;
   border: 1px solid #BADA55;
-  margin: 1em;
+  margin-bottom: 1em;
   padding: 1em; }
-  section #questionMedia img {
-    width: 100%; }
   section #questionMedia figcaption {
     font-style: italic;
     text-align: center;
-    width: 100%;
     padding-top: 1em; }
   section #questionText {
     margin: 2em 0; }
   section #answerChoices {
     list-style-type: none;
     counter-reset: ol-counter; }
+    section #answerChoices li {
+      position: relative;
+      padding-left: 5em;
+      padding-bottom: 1em;
+      min-height: 5em; }
     section #answerChoices li:before {
-      content: counter(ol-counter);
-      counter-increment: ol-counter; }
+      content: counter(ol-counter,upper-alpha);
+      counter-increment: ol-counter;
+      text-align: center;
+      padding-top: 0.4em;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      left: 0;
+      background-color: #BADA55;
+      border-radius: 50%;
+      border: 2px solid #B3D4FC;
+      width: 2em;
+      height: 2em; }
 
 header {
   font-size: 3rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0.5em; }
 
 /*# sourceMappingURL=MainStyle.css.map */
