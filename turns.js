@@ -55,7 +55,7 @@ turns = [
                 "url": "media/2.png"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {},
         "options": {
             1: {
                 "label": "2-1",
@@ -102,7 +102,12 @@ turns = [
                 "url": "media/3.png"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            }
+        },
         "options": {
             1: {
                 "label": "3-1",

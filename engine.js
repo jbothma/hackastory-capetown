@@ -44,6 +44,21 @@ engine = {
         return state;
     },
 
+    getTurns: function(state) {
+        return turns.filter(function(turn) {
+            var include = true;
+            Object.keys(turn.triggerLimits).forEach(function(vital) {
+                var currentVital = state.vitals[vital];
+                var thresholds = turn.triggerLimits[vital];
+                if ((currentVital < thresholds.min)
+                    || (currentVital > thresholds.max)) {
+                    include = false;
+                }
+            })
+            return include;
+        });
+    },
+
     transition: function(state) {
         this.endings.forEach(function(ending) {
             Object.keys(ending.vitals).forEach(function(vital) {
@@ -58,7 +73,8 @@ engine = {
             })
         });
         if (state.ending === null) {
-            state.turn = turns[Math.round(Math.random()*turns.length)];
+            var turns = this.getTurns(state);
+            state.turn = turns[Math.floor(Math.random())];
         } else {
             state.turn = null;
         }
