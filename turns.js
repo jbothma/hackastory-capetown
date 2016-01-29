@@ -6,7 +6,16 @@ initialTurn = {
             "url": "media/police-disperce-tuition-protesters-1.jpg"
         }
     },
-    "triggerLimits": [],
+    "triggerLimits": {
+        "peacefulProtest": {
+            "min": 100,
+            "max": 100
+        },
+         "legality": {
+            "min": 100,
+            "max": 100
+        }
+    },
     "options": {
         1: {
             "label": "Fire rubber bullets at them",
@@ -56,7 +65,16 @@ turns = [
                 "url": "https://www.youtube.com/embed/zuJYCwMtIAc"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 50,
+                "max": 100
+            },
+            "protestSuccess": {
+                "min": 0,
+                "max": 30
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -97,13 +115,26 @@ turns = [
     },
     {
         "context": {
-            "text" : "The protesters reach the councillor's office... but he's no-show! People start getting angry and suddenly some bins are on fire.",
+            "text" : "The protesters reach the councillor's office and hand over their memorandum successfully. While some protesters start going home, others are angry at the police and start damaging the council property. ",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            },
+            "protestSuccess": {
+                "min": 70,
+                "max": 100
+            },
+            "legality": {
+                "min": 0,
+                "max": 30
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -132,7 +163,7 @@ turns = [
                 }
             },
             4: {
-                "label": "Try to identify some of the leaders and negotiate with them to stop the burning of the bins",
+                "label": "Try to identify some of the leaders and negotiate with them.",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
@@ -151,7 +182,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "protestSuccess": {
+                "min": 0,
+                "max": 30
+            }
+        },
         "options": {
             1: {
                 "label": "Stop them and turn them back. They didn't get permission to disperse early",
