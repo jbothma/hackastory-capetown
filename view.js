@@ -41,10 +41,18 @@
         var $qContainer = $newCard.find('.question');
         var $qVideo = $qContainer.find('.videoContainer');
         var $aList = $newCard.find('.answerList');
+        var $aHint = $newCard.find('.aHint');
         // SET DESCRIPTION TEXT
 
         if (typeof(context.text) !== 'undefined')
             $qText.html(context.text);
+
+        if (typeof(context.hint) !== 'undefined') {
+            $aHint.attr('href',context.hint)
+                .css('display','inline');
+        } else {
+            $aHint.css('display','none');
+        }
 
         // SET DESCRIPTION MEDIA
 
@@ -58,6 +66,12 @@
                     $qContainer.css('background-image','url(media/police-vague.jpg)');
                     $qVideo.empty().append(
                         $('<iframe>').attr('src', context.media.url)
+                    ).css('visibility','visible');
+                    break;
+                case "logo" :
+                    $qContainer.css('background-image','url(media/police-vague.jpg)');
+                    $qVideo.empty().append(
+                        $('<img>').attr('src', context.media.url).addClass('logo')
                     ).css('visibility','visible');
                     break;
             }

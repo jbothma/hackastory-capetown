@@ -26,6 +26,8 @@ body {
   font: 100% $font-stack-regular;
   color: $primary-color;
   position: relative;
+  background-image: url(media/bg-loop.jpg);
+  background-repeat: repeat-y;
 }
 
 main {
@@ -46,13 +48,16 @@ a {
 
 .question {
   z-index: -999;
-  background-size: cover;
+  background-size: contain;
 
   .videoContainer {
     visibility: hidden;
     height: 200px;
     width: 100%;
     text-align: center;
+    background-image: url(media/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
 
     iframe {
       height: 100%;
@@ -71,6 +76,7 @@ a {
     font-size: 2em;
     font-weight: bold;
     padding: 0.5em;
+
   }
 }
 
@@ -93,6 +99,10 @@ a {
       padding-right: 0.5em;
       font-size: $font-size-bigger;
       vertical-align: -7px;
+    }
+
+    a.aHint {
+      float: right;
     }
 
   }

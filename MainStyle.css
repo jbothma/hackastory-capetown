@@ -205,7 +205,9 @@ html, main, body, section, article, figure, figcaption, ol {
 body {
   font: 100% FiraSans-Regular, Helvetica, sans-serif;
   color: #333;
-  position: relative; }
+  position: relative;
+  background-image: url(media/bg-loop.jpg);
+  background-repeat: repeat-y; }
 
 main {
   position: absolute;
@@ -222,12 +224,15 @@ a {
 
 .question {
   z-index: -999;
-  background-size: cover; }
+  background-size: contain; }
   .question .videoContainer {
     visibility: hidden;
     height: 200px;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    background-image: url(media/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center; }
     .question .videoContainer iframe {
       height: 100%; }
   .question p {
@@ -253,6 +258,8 @@ a {
       padding-right: 0.5em;
       font-size: 1.5rem;
       vertical-align: -7px; }
+    .answer header a.aHint, .gameOver header a.aHint {
+      float: right; }
   .answer.question header:before, .gameOver.question header:before {
     content: "?"; }
   .answer.answer header:before, .gameOver.answer header:before {

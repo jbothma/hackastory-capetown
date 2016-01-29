@@ -3,7 +3,7 @@ initialTurn = {
         "text" : "You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
         "media" : {
             "type": "image",
-            "url": "media/police-disperce-tuition-protesters-1.jpg"
+            "url": "media/crowd-is-advancing.jpg"
         }
     },
     "triggerLimits": {
@@ -185,7 +185,7 @@ turns = [
             "text" : "A bunch of protesters split away and start moving back to the train station",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/protesters-split.jpg"
             }
         },
         "triggerLimits": {
@@ -233,7 +233,7 @@ turns = [
             "text" : "Wait! This is an illegal protest in terms of the Regulation of Gatherings Act",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/illegal-protest.jpg"
             }
         },
         "triggerLimits": {
@@ -339,7 +339,7 @@ turns = [
             "text" : "People are now burning tyres. There is a thick cloud of smoke hanging low in the air and it stinks.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/burning-tyres.jpg"
             }
         },
         "triggerLimits": {
@@ -396,7 +396,7 @@ turns = [
             "text" : "Over to the side of the march, a fight breaks out between traders and a few protesters!",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/looting.jpg"
             }
         },
         "triggerLimits": {
@@ -452,7 +452,7 @@ turns = [
             "text" : "Your tactics worked! But a group of disruptors has just arrived and calling for people to attack the police.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/tactics-have-worked.jpg"
             }
         },
         "triggerLimits": {
@@ -572,7 +572,7 @@ turns = [
             "text" : "The protesters react angrily and now there are clashes between protesters and police",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/attack-the-police.jpg"
             }
         },
         "triggerLimits": {
@@ -632,7 +632,7 @@ turns = [
             "text" : "Your tactics haven't worked. Disrupters are now trying to set the councillor's office on fire.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/tactics-have-not-worked.jpg"
             }
         },
         "triggerLimits": {
@@ -835,7 +835,7 @@ turns = [
             "text" : "One of the protesters comes within arm's reach of you and he's photographing you.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/photograph2.jpg"
             }
         },
         "triggerLimits": {
@@ -892,7 +892,7 @@ turns = [
             "text" : "The crowd are just kinda carrying on with what they were doing",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/protesters-around-the-corner.jpg"
             }
         },
         "triggerLimits": {},
