@@ -18,7 +18,7 @@
                         currState.turn.options);
         } else {
             if (typeof currState.ending !== 'undefined'){
-                endGame(currState.ending.vitals);
+                endGame(currState);
             }
         }
     }
@@ -99,7 +99,7 @@
 
     }
 
-    function endGame(vitals){
+    function endGame(state){
         $('#mainCard').css('position','absolute')
             .transition({left: '-100%'}, 500, function() {
                 $('#mainCard').remove();
@@ -116,7 +116,7 @@
                 .append( $('<section>')
                     .addClass('gameOver')
                     .append( $('<header>').html('Thank you for playing!'))
-                    .append( $('<article>').html(makeEndText(vitals)))
+                    .append( $('<article>').html(makeEndText(state)))
                 )
             )
             .transition({left: '0'}, 500, function() {
@@ -125,36 +125,26 @@
 
     }
 
-    function makeEndText(vitals){
+    function makeEndText(state){
+        var winTextPast = {true: "won",
+                           false: "lost"};
         var txt = "";
 
-        var vital;
-        var won = false;
+        var endingVital;
+        var endingVitalKey;
 
-        Object.keys(vitals).forEach(function(n) {
-
-            vital = vitals[n];
-
-            if (typeof vital.win !== 'undefined')
-                if (vital.win)
-                    won = true;
+        // we expect only one of these
+        Object.keys(state.ending.vitals).forEach(function(n) {
+            endingVital = state.ending.vitals[n];
+            endingVitalKey = n;
         });
 
-        if (won) {
-            txt += "<h1>You've won!</h1>";
-        } else {
-            txt += "<h1>You've lost!</h1>";
-        }
+        txt += "<h1>You've " + winTextPast[endingVital.win] + "!</h1>";
 
-        txt += "Your score is:<br>";
+        txt += endingVital.explanation;
 
-        if (typeof vitals.peacefulProtest !== 'undefined')
-            txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
 
-        if (typeof vitals.protestSuccess !== 'undefined')
-            txt += vitals.protestSuccess.value + " protestSuccess<br>";
-
-        txt += "Made for <br><img src='media/logo-circle.png' style='width: 75%'>"
+        txt += "<br><br>Made for <br><img src='media/logo-circle.png' style='width: 50%'>"
         txt += "<br><a href='https://www.hackastory.com/' target='_blank'>Hackastory Capetown 2016</a>";
         txt += "<br><br>Crowd Control is a prototype by";
         txt += "<br>JD Bothma";

@@ -20,7 +20,8 @@ engine = {
                 peacefulProtest: {
                     cmp: "lte",
                     value: 0,
-                    win: false
+                    win: false,
+                    explanation: "You’ve lost control of the situation! <br>You came down way too hard on the protesters the march has ended in chaos and arrests - and possible criminal charges against you. Your clamp-downs backfired. <br>You should <a href=\"ni_4.pdf\">read the regulations on police conduct at protests</a>. Or resign as a cop!"
                 },
             }
         },
@@ -29,7 +30,8 @@ engine = {
                 protestSuccess: {
                     cmp: "gte",
                     value: 100,
-                    win: true
+                    win: true,
+                    explanation: "Well done! <br>Despite some chaos, the protest has concluded successfully and you managed to avoid major violence and chaos. Your conduct was more or less in line with <a href=\"ni_4.pdf\">the regulations on police conduct.</a>"
                 },
             }
         }
