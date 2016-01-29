@@ -163,5 +163,12 @@
 
     }
 
+    $('#popover').find('.popoverClose').on('click', function() {
+        $('#popover').hide();
+    });
+
+    $('body').find('.showHint').on('click', function() {
+        $('#popover').show();
+    });
 
 })(engine);

@@ -196,6 +196,9 @@ textarea {
   font-family: FiraSans-Regular;
   src: url(media/fonts/fira-sans/FiraSans-Regular.ttf); }
 @font-face {
+  font-family: FiraSans-Bold;
+  src: url(media/fonts/fira-sans/FiraSans-Bold.ttf); }
+@font-face {
   font-family: FiraSans-ExtraBold;
   src: url(media/fonts/fira-sans/FiraSans-ExtraBold.ttf); }
 html, main, body, section, article, figure, figcaption, ol {
@@ -209,6 +212,36 @@ body {
   background-image: url(media/bg-loop.jpg);
   background-repeat: repeat-y; }
 
+div#popover {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ccc;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  min-height: 100%;
+  padding: 1em; }
+  div#popover a:link, div#popover a:hover, div#popover a:visited, div#popover a:active {
+    color: #ccc; }
+  div#popover p {
+    padding-bottom: 1em; }
+  div#popover nav {
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+    text-align: center; }
+  div#popover h2 {
+    font-size: 1.2em;
+    font-family: FiraSans-Bold, Helvetica, sans-serif; }
+  div#popover strong {
+    font-family: FiraSans-Bold, Helvetica, sans-serif; }
+  div#popover ol {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    color: #bada55; }
+    div#popover ol li {
+      margin-bottom: 1em; }
+
 main {
   position: absolute;
   top: 0;
@@ -217,10 +250,6 @@ main {
 
 h1 {
   font-size: 1.5rem; }
-
-a {
-  border: 1px solid #31409D;
-  padding: 3px 10px; }
 
 .question {
   z-index: -999;
@@ -240,7 +269,8 @@ a {
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 6px #000;
     font-size: 2em;
     font-weight: bold;
-    padding: 0.5em; }
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.9); }
 
 .answer, .gameOver {
   background-color: #fff;
@@ -253,12 +283,12 @@ a {
     padding-right: 1em;
     color: #fff;
     background-color: #31409d;
-    font-family: FiraSans-ExtraBold, Helvetica, sans-serif; }
+    font-family: FiraSans-Bold, Helvetica, sans-serif; }
     .answer header:before, .gameOver header:before {
       padding-right: 0.5em;
       font-size: 1.5rem;
       vertical-align: -7px; }
-    .answer header a.aHint, .gameOver header a.aHint {
+    .answer header nav.showHint, .gameOver header nav.showHint {
       float: right; }
   .answer.question header:before, .gameOver.question header:before {
     content: "?"; }

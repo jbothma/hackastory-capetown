@@ -5,13 +5,20 @@
   src: url(media/fonts/fira-sans/FiraSans-Regular.ttf);
 }
 
+
+@font-face {
+  font-family: FiraSans-Bold;
+  src: url(media/fonts/fira-sans/FiraSans-Bold.ttf);
+}
+
 @font-face {
   font-family: FiraSans-ExtraBold;
   src: url(media/fonts/fira-sans/FiraSans-ExtraBold.ttf);
 }
 
 $font-stack-regular:    FiraSans-Regular, Helvetica, sans-serif;
-$font-stack-bold:    FiraSans-ExtraBold, Helvetica, sans-serif;
+$font-stack-extrabold:    FiraSans-ExtraBold, Helvetica, sans-serif;
+$font-stack-bold:    FiraSans-Bold, Helvetica, sans-serif;
 $font-size-regular: 100%;
 $font-size-bigger: 1.5rem;
 $font-size-huge: 3rem;
@@ -30,6 +37,52 @@ body {
   background-repeat: repeat-y;
 }
 
+div#popover {
+  display: none;
+  background-color: rgba(0,0,0,0.9);
+  color: #ccc;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  min-height: 100%;
+  padding: 1em;
+
+  a:link, a:hover, a:visited, a:active {
+    color: #ccc;
+  }
+
+  p {
+    padding-bottom: 1em;
+  }
+
+  nav {
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    font-family: $font-stack-bold;
+  }
+
+  strong {
+    font-family: $font-stack-bold;
+  }
+
+  ol {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    color: #bada55;
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
 main {
   position: absolute;
   top: 0;
@@ -41,10 +94,6 @@ h1 {
   font-size: $font-size-bigger;
 }
 
-a {
-  border: 1px solid #31409D;
-  padding: 3px 10px;
-}
 
 .question {
   z-index: -999;
@@ -76,6 +125,7 @@ a {
     font-size: 2em;
     font-weight: bold;
     padding: 0.5em;
+    background-color: rgba(0,0,0,0.9);
 
   }
 }
@@ -86,6 +136,9 @@ a {
   border-radius: 10px;
   width: 95%;
   margin: auto;
+
+
+
 
   header {
     border-radius: 10px 10px 0 0;
@@ -101,7 +154,7 @@ a {
       vertical-align: -7px;
     }
 
-    a.aHint {
+    nav.showHint {
       float: right;
     }
 
