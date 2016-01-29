@@ -1,6 +1,6 @@
 initialTurn = {
     "context": {
-        "text" : "A large group of protesters comes around the corner and heads right for you!",
+        "text" : "A lekker large group of protesters comes around the corner and heads right for you!",
         "media" : {
             "type": "image",
             "url": "media/police-disperce-tuition-protesters-1.jpg"
