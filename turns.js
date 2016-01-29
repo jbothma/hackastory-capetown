@@ -1,6 +1,6 @@
 initialTurn = {
     "context": {
-        "text" : "Welcome to South Africa, the protest capital of the world. It’s not exactly a picnic for people who take to the streets to demand basic rights. Protests are democracy in action, but protests are also what happen when the formal processes of democracy fail. And as crowds gather in the streets, it’s the police that are supposed to facilitate protests, without too much interference.  But it doesn’t always happen that way.",
+        "text" : "Welcome to South Africa, the protest capital of the world. Police are supposed to facilitate protests without interfering too much.  But it doesn’t always happen that way.",
         "media" : {
             "type": "image",
             "url": "media/crowd-is-advancing.jpg"
@@ -985,10 +985,10 @@ turns = [
 
     {
         "context": {
-            "text" : "The crowd are just kinda carrying on with what they were doing",
+            "text" : "You are moved to a part of the protest that is quieter, but some protesters insulting you and accuse the police of being too violent.",
             "media" : {
-                "type": "image",
-                "url": "media/protesters-around-the-corner.jpg"
+                "type": " ",
+                "url": " "
             }
         },
         "triggerLimits": {
@@ -997,11 +997,149 @@ turns = [
                 "max": 4
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
+        },
         "options": {
             1: {
-                "label": "Leave them be",
+                "label": "Argue back and use force if they get angry.",
                 "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -5,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Let them pass by.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 5,
+                    "legality": 0,
+                    "policeDeath": 0,
                     "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Do not react, but keep an eye on the angrier protesters.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "The crowd quietens for a while and keeps moving.",
+            "media" : {
+                "type": " ",
+                "url": " "
+            }
+        },
+        "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            }
+        },
+        "entryVitalDeltas": {
+            "protestSuccess": 5
+        },
+        "options": {
+            1: {
+                "label": "Keep an eye on possible instigators of violence.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 5,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+                "label": "Show them your weapons to keep them intimidated.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -5,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Let them carry on and keep your distance.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Tell them to hurry up and get going.",
+                "vitalsDeltas": {
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "The crowd moves on while singing songs loudly and showing protest posters to observers.",
+            "media" : {
+                "type": " ",
+                "url": " "
+            }
+        },
+        "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": 5
+        },
+        "options": {
+            1: {
+                "label": "Sing along and show your support for their cause.",
+                "vitalsDeltas": {
+                    "legality" : -10,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+	        "label": "Let them carry on and keep your distance.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            3: {
+                "label": "Sneer at them, so that they know you don't agree with their protest.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Keep an eye on the crowd and make sure no one interferes with their progress.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "policeDeath": 0,
+                    "protestSuccess": 5
                 }
             }
         }
