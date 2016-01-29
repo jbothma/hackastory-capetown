@@ -133,9 +133,11 @@
 
         txt += "Your score is:<br>";
 
+        if (typeof vitals.peacefulProtest.value !== 'undefined')
+            txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
 
-        txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
-        //txt += vitals.protestSuccess.value + " protestSuccess<br>";
+        if (typeof vitals.protestSuccess.value !== 'undefined')
+            txt += vitals.protestSuccess.value + " protestSuccess<br>";
 
         txt += "Made for <br><img src='media/logo-circle.png' style='width: 75%'>"
         txt += "<br>Hackastory Capetown 2016";
