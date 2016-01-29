@@ -11,7 +11,7 @@ initialTurn = {
             "min": 100,
             "max": 100
         },
-         "legality": {
+        "legality": {
             "min": 100,
             "max": 100
         }
@@ -227,7 +227,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "protestSuccess": {
+                "min": 0,
+                "max": 20
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -276,7 +281,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "protestSuccess": {
+                "min": 0,
+                "max": 40
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -325,7 +335,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 20,
+                "max": 70
+            },
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -374,7 +389,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 20,
+                "max": 50
+            },
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -422,7 +442,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 50,
+                "max": 100
+            },
+            "negotiations": {
+                "min": 9,
+                "max": 21
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -470,7 +499,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            },
+            "legality": {
+                "min": 0,
+                "max": 50
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -518,7 +556,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 30
+            },
+            "legality": {
+                "min": 0,
+                "max": 20
+            }
+        },
         "options": {
             1: {
                 "label": "Open fire!",
@@ -575,7 +622,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            },
+            "negotiations": {
+                "min": 9,
+                "max": 21
+            }
+        },
         "options": {
             1: {
                 "label": "Move in with truncheons. Anyone who doesn't run gets hit",
@@ -633,7 +689,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            },
+            "negotiations": {
+                "min": 11,
+                "max": 61
+            }
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -683,7 +748,16 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "peacefulProtest": {
+                "min": 50,
+                "max": 100
+            },
+            "negotiations": {
+                "min": 11,
+                "max": 61
+            }
+        },
         "options": {
             1: {
                 "label": "Move in with truncheons. Anyone who doesn't run gets hit",
@@ -742,7 +816,12 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
-        "triggerLimits": [],
+        "triggerLimits": {
+            "legality": {
+                "min": 0,
+                "max": 50
+            }
+        },
         "options": {
             1: {
                 "label": "Arrest him",
@@ -778,6 +857,25 @@ turns = [
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "The trigger limits are too strict! There wasn't a legal turn!",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": {},
+        "options": {
+            1: {
+                "label": "Talk to Elna",
+                "vitalsDeltas": {
+                    "protestSuccess": 10
                 }
             }
         }
