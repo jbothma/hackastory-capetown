@@ -905,4 +905,147 @@ turns = [
             }
         }
     }
+        { "context": {
+            "text" : "You are moved to a part of the protest that is quieter, but some protesters insulting you and accuse the police of being too violent.",
+            "media" : {
+                "type": " ",
+                "url": " "
+            }
+        },
+        
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
+        },
+        "options": {
+            1: {
+                "label": "Argue back and use force if they get angry.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -5,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Let them pass by.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Do not react, but keep an eye on the angrier protesters.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            }
+        }
+    },
+    { "context": {
+            "text" : "The crowd quietens for a while and keeps moving.",
+            "media" : {
+                "type": " ",
+                "url": " "
+            }
+        },
+        
+        "entryVitalDeltas": {
+            "protestSuccess": 5
+        },
+        "options": {
+            1: {
+                "label": "Keep an eye on possible instigators of violence.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 5,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+                "label": "Show them your weapons to keep them intimidated.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -5,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Let them carry on and keep your distance.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Tell them to hurry up and get going.",
+                "vitalsDeltas": {                    
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            }
+        }
+    },
+   { "context": {
+            "text" : "The crowd moves on while singing songs loudly and showing protest posters to observers.",
+            "media" : {
+                "type": " ",
+                "url": " "
+            }
+        },
+        
+        "entryVitalDeltas": {
+            "peacefulProtest": 5
+        },
+        "options": {
+            1: {
+                "label": "Sing along and show your support for their cause.",
+                "vitalsDeltas": {
+                    "legality" : -10,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+		"label": "Let them carry on and keep your distance.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+               }
+            },
+            3: {
+                "label": "Sneer at them, so that they know you don't agree with their protest.",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Keep an eye on the crowd and make sure no one interferes with their progress.",
+                "vitalsDeltas": {                    
+                    "peacefulProtest" : 10,
+                    "policeDeath": 0,
+                    "protestSuccess": 5
+                }
+            }
+        }
+    },
 ];
