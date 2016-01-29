@@ -1,6 +1,6 @@
 initialTurn = {
     "context": {
-        "text" : "It's the morning of a big protest. You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Nearly an hour after you deploy, you hear the first sounds of an approaching crowd. Before long, a massive group of protesters comes around the corner. There are thousands and thousands of them. They're heading right for you!",
+        "text" : "You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
         "media" : {
             "type": "image",
             "url": "media/police-disperce-tuition-protesters-1.jpg"
