@@ -165,7 +165,7 @@ turns = [
             "text" : "The protesters reach the councillor's office and hand over their memorandum successfully. While some protesters start going home, others are still angry with the police and start throwing rubbish.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/shout.jpg"
             }
         },
         "entryVitalDeltas": {
@@ -346,7 +346,7 @@ turns = [
             "text" : "There are WAY more people that what the protest organisers agreed to. You are completely out-numbered and could over-run at any point.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/outnumbered.jpg"
             }
         },
         "triggerLimits": {
@@ -584,7 +584,7 @@ turns = [
             "text" : "The crowd is getting angrier and advancing. They look aggressive.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/flagpicture.jpg"
             }
         },
         "triggerLimits": {
@@ -786,7 +786,7 @@ turns = [
             "text" : "Your tactics haven't worked. Disrupters are now brandishing stones.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/angry.jpg"
             }
         },
         "triggerLimits": {
@@ -852,7 +852,7 @@ turns = [
             "text" : "Your tactics have worked. But one of them throws a stone at you.",
             "media" : {
                 "type": "image",
-                "url": "media/lion.jpg"
+                "url": "media/one.jpg"
             }
         },
         "triggerLimits": {
