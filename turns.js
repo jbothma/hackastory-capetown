@@ -607,8 +607,6 @@ turns = [
                     "protestSuccess": 0
                 }
             },
-          
-            },
             3: {
                 "label": "Isolate the agitators and arrest them",
                 "vitalsDeltas": {

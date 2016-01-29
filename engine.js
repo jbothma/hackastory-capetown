@@ -59,13 +59,12 @@ engine = {
             })
             return include;
         });
-        console.log(relevantTurns.length);
         if (relevantTurns.length > 1) {
             relevantTurns = relevantTurns.filter(function(turn) {
                 return turn != state.previousTurn;
             })
         };
-        console.log(relevantTurns.length);
+        console.log("Turn chosen randomly from ", relevantTurns.length);
         return relevantTurns;
     },
 
