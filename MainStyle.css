@@ -208,9 +208,7 @@ html, main, body, section, article, figure, figcaption, ol {
 body {
   font: 100% FiraSans-Regular, Helvetica, sans-serif;
   color: #333;
-  position: relative;
-  background-image: url(media/bg-loop.jpg);
-  background-repeat: repeat-y; }
+  position: relative; }
 
 div#popover {
   display: none;
@@ -246,7 +244,9 @@ main {
   position: absolute;
   top: 0;
   left: 100%;
-  transition: left 0.5s ease; }
+  transition: left 0.5s ease;
+  background-image: url(media/bg-loop.jpg);
+  background-repeat: repeat-y; }
 
 h1 {
   font-size: 1.5rem; }
@@ -289,7 +289,8 @@ h1 {
       font-size: 1.5rem;
       vertical-align: -7px; }
     .answer header nav.showHint, .gameOver header nav.showHint {
-      float: right; }
+      float: right;
+      padding-top: 5px; }
   .answer.question header:before, .gameOver.question header:before {
     content: "?"; }
   .answer.answer header:before, .gameOver.answer header:before {

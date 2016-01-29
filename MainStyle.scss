@@ -33,8 +33,6 @@ body {
   font: 100% $font-stack-regular;
   color: $primary-color;
   position: relative;
-  background-image: url(media/bg-loop.jpg);
-  background-repeat: repeat-y;
 }
 
 div#popover {
@@ -88,6 +86,9 @@ main {
   top: 0;
   left: 100%;
   transition: left 0.5s ease;
+
+  background-image: url(media/bg-loop.jpg);
+  background-repeat: repeat-y;
 }
 
 h1 {
@@ -156,6 +157,7 @@ h1 {
 
     nav.showHint {
       float: right;
+      padding-top: 5px;
     }
 
   }

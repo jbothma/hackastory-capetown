@@ -156,9 +156,16 @@
 
         txt += "Made for <br><img src='media/logo-circle.png' style='width: 75%'>"
         txt += "<br><a href='https://www.hackastory.com/' target='_blank'>Hackastory Capetown 2016</a>";
-        txt += "<br><br>by people";
-        txt += "<br>who have names";
-        txt += "<br>which will be listed here";
+        txt += "<br><br>Crowd Control is a prototype by";
+        txt += "<br>JD Bothma";
+        txt += "<br>Hans van Arken";
+        txt += "<br>Kadija Patel";
+        txt += "<br>Elna Schütz";
+        txt += "<br>MunterMac";
+        txt += "<br>";
+        txt += "<br>Photos courtesy of the Daily Vox";
+        txt += "<br>";
+        txt += "<br>The right to protest courtesy of section 18 of the South African Constitution.";
 
         return txt;
 
