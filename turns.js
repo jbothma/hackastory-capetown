@@ -9,11 +9,11 @@ initialTurn = {
     "triggerLimits": {
         "peacefulProtest": {
             "min": 100,
-            "max": 100
+            "max": 1000
         },
         "legality": {
             "min": 100,
-            "max": 100
+            "max": 1000
         }
     },
     "options": {
@@ -68,12 +68,15 @@ turns = [
         "triggerLimits": {
             "peacefulProtest": {
                 "min": 50,
-                "max": 100
+                "max": 1000
             },
             "protestSuccess": {
                 "min": 0,
                 "max": 30
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
         },
         "options": {
             1: {
@@ -121,6 +124,9 @@ turns = [
                 "url": "media/lion.jpg"
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
+        },
         "triggerLimits": {
             "peacefulProtest": {
                 "min": 0,
@@ -128,7 +134,7 @@ turns = [
             },
             "protestSuccess": {
                 "min": 70,
-                "max": 100
+                "max": 1000
             },
             "legality": {
                 "min": 0,
@@ -188,6 +194,9 @@ turns = [
                 "max": 30
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": 5
+        },
         "options": {
             1: {
                 "label": "Stop them and turn them back. They didn't get permission to disperse early",
@@ -232,6 +241,9 @@ turns = [
                 "min": 0,
                 "max": 20
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": 0
         },
         "options": {
             1: {
@@ -287,6 +299,9 @@ turns = [
                 "max": 40
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": 0
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -340,6 +355,9 @@ turns = [
                 "min": 20,
                 "max": 70
             },
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -1
         },
         "options": {
             1: {
@@ -395,6 +413,9 @@ turns = [
                 "max": 50
             },
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -445,12 +466,15 @@ turns = [
         "triggerLimits": {
             "peacefulProtest": {
                 "min": 50,
-                "max": 100
+                "max": 1000
             },
             "negotiations": {
                 "min": 9,
                 "max": 21
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
         },
         "options": {
             1: {
@@ -509,6 +533,9 @@ turns = [
                 "max": 50
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": -2
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -565,6 +592,9 @@ turns = [
                 "min": 0,
                 "max": 20
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
         },
         "options": {
             1: {
@@ -631,6 +661,9 @@ turns = [
                 "min": 9,
                 "max": 21
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
         },
         "options": {
             1: {
@@ -699,6 +732,9 @@ turns = [
                 "max": 61
             }
         },
+        "entryVitalDeltas": {
+            "peacefulProtest": -5
+        },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -751,12 +787,15 @@ turns = [
         "triggerLimits": {
             "peacefulProtest": {
                 "min": 50,
-                "max": 100
+                "max": 1000
             },
             "negotiations": {
                 "min": 11,
                 "max": 61
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": -1
         },
         "options": {
             1: {
@@ -818,9 +857,12 @@ turns = [
         },
         "triggerLimits": {
             "legality": {
-                "min": 0,
+                "min": -1000,
                 "max": 50
             }
+        },
+        "entryVitalDeltas": {
+            "peacefulProtest": 2
         },
         "options": {
             1: {
@@ -864,7 +906,7 @@ turns = [
 
     {
         "context": {
-            "text" : "The trigger limits are too strict! There wasn't a legal turn!",
+            "text" : "The crowd are just kinda carrying on with what they were doing",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -873,7 +915,7 @@ turns = [
         "triggerLimits": {},
         "options": {
             1: {
-                "label": "Talk to Elna",
+                "label": "Leave them be",
                 "vitalsDeltas": {
                     "protestSuccess": 10
                 }

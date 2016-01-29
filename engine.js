@@ -87,6 +87,12 @@ engine = {
             var turns = this.getTurns(state);
             var idx = Math.round(Math.random()*(turns.length-1));
             state.turn = turns[idx];
+            if ('entryVitalDeltas' in state.turn) {
+                Object.keys(state.turn.entryVitalDeltas).forEach(function(vital) {
+                    var delta = state.turn.entryVitalDeltas[vital];
+                    state.vitals[vital] = state.vitals[vital] + delta;
+                })
+            }
         } else {
             state.turn = null;
         }
