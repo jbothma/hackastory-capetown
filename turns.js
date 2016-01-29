@@ -61,7 +61,8 @@ turns = [
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
-                    "policeDeath": 0
+                    "policeDeath": 0,
+                    "intro": 1
                 }
             },
             2: {
@@ -70,7 +71,8 @@ turns = [
                     "peacefulProtest" : 10,
                     "legality": 0,
                     "policeDeath": 0,
-                    "protestSuccess": 20
+                    "protestSuccess": 20,
+                    "intro": 1
                 }
             },
             3: {
@@ -79,7 +81,8 @@ turns = [
                     "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
-                    "protestSuccess": 0
+                    "protestSuccess": 0,
+                    "intro": 1
                 }
             },
             4: {
@@ -88,7 +91,8 @@ turns = [
                     "peacefulProtest" : 0,
                     "legality": -10,
                     "policeDeath": 0,
-                    "protestSuccess": 5
+                    "protestSuccess": 5,
+                    "intro": 1
                 }
             }
         }
