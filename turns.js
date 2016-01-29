@@ -20,7 +20,7 @@ initialTurn = {
 turns = [
     {
         "context": {
-            "text" : "You are a member of a Public Order Policing unit deployed to a protest in Cape Town. \n\nYou have a baton, a shield, and a shotgun with rubber bullets. You also get stun grenades and pepper spray, and your commander is nearby.\n\n The protesters are not your enemy. Your instructions are to use minimum force, but hey, it’s not always so easy.",
+            "text" : "You are a member of a Public Order Policing unit in Cape Town. \n\nYou have a baton, a shield, and a shotgun with rubber bullets. You also get stun grenades and pepper spray, and your commander is nearby.\n\n The protesters are not your enemy. Your instructions are to use minimum force, but hey, it’s not always so easy.",
             "media" : {
                 "type": "image",
                 "url": "media/Illegal-protest.jpg"
@@ -43,7 +43,7 @@ turns = [
     },
     {
         "context": {
-            "text" : "You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
+            "text" : "You've been deployed to a community that's been without water for weeks. Your unit receives word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
             "media" : {
                 "type": "image",
                 "url": "media/police-disperce-tuition-protesters-1.jpg"
@@ -78,7 +78,7 @@ turns = [
             3: {
                 "label": "Use a stun grenade to slow the march and make sure you don't get swarmed",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0,
@@ -88,7 +88,7 @@ turns = [
             4: {
                 "label": "Move in closely so that they know you are watching and make sure they see that you are armed",
                 "vitalsDeltas": {
-                    "peacefulProtest" : 0,
+                    "peacefulProtest" : -10,
                     "legality": -10,
                     "policeDeath": 0,
                     "protestSuccess": 5,
@@ -135,7 +135,7 @@ turns = [
             2: {
                 "label": "Okay, it's time for a stun grenade",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -144,7 +144,7 @@ turns = [
             3: {
                 "label": "This can't get out of hand. Fire off some rubber bullets and move them back",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0
                 }
@@ -193,7 +193,7 @@ turns = [
             1: {
                 "label": "You need to disperse them. Deploy some stun grenades",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -202,13 +202,13 @@ turns = [
             2: {
                 "label": "Put an end to this. Arrest everyone",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0
                 }
             },
             3: {
-                "label": "Wait and see, this may resolve itselfn",
+                "label": "Wait and see, this may resolve itself",
                 "vitalsDeltas": {
                     "peacefulProtest" : 5,
                     "legality": 0,
@@ -253,7 +253,7 @@ turns = [
             1: {
                 "label": "Stop them and turn them back. They didn't get permission to disperse early",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -15,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -5
@@ -262,7 +262,7 @@ turns = [
             2: {
                 "label": "Demand that the protest leaders keep them in formation",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -5,
+                    "peacefulProtest" : -20,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -271,7 +271,7 @@ turns = [
             3: {
                 "label": "Keep your distance and monitor the situation",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -5,
+                    "peacefulProtest" : -15,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -305,7 +305,7 @@ turns = [
             1: {
                 "label": "Recipe for disaster. Block off the road and turn them back",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -10,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
@@ -314,7 +314,7 @@ turns = [
             2: {
                 "label": "You need to act decisively. Turn them back with rubber bullets or stun grenades.",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
@@ -332,7 +332,7 @@ turns = [
             4: {
                 "label": "You don't need to stop them but you do need to send a message. Move close with a line of officers and make sure they can see that you are armed",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -10,
+                    "peacefulProtest" : -20,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": -10
@@ -366,16 +366,16 @@ turns = [
             1: {
                 "label": "Cordon off a section of the crowd and move them somewhere else",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -15,
+                    "peacefulProtest" : -25,
                     "legality": -15,
                     "policeDeath": 0,
                     "protestSuccess": -10
                 }
             },
             2: {
-                "label": "You need to thin out the crowd a little bit. Rubber bullets are too sever. Try a stun grenade",
+                "label": "You need to thin out the crowd a little bit. Rubber bullets are too severe. Try a stun grenade",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -419,7 +419,7 @@ turns = [
             1: {
                 "label": "That's destruction of property! This thing is out of hand, arrest everyone",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
@@ -428,7 +428,7 @@ turns = [
             2: {
                 "label": "It's time to disperse. Give the order for stun grenades amd rubber bullets",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -489,7 +489,7 @@ turns = [
             2: {
                 "label": "Clear the area before looting breaks out. Deploy tear gas now!",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -35,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
@@ -544,7 +544,7 @@ turns = [
             1: {
                 "label": "You can't afford to start a fight now. Just hang back and let this thing play out",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -5,
+                    "peacefulProtest" : -15,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -553,7 +553,7 @@ turns = [
             2: {
                 "label": "Act decisively. Rubber bullets. Stun grenades",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -606,18 +606,18 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "You need them to move way back. Fire off some rubber bullets",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "You need to divert the crowd. Stun grenades",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -672,7 +672,7 @@ turns = [
             1: {
                 "label": "Open fire!",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -55,
                     "legality": -25,
                     "policeDeath": 1,
                     "protestSuccess": -10
@@ -699,7 +699,7 @@ turns = [
             4: {
                 "label": "Arrest everybody - NOW",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -10,
+                    "peacefulProtest" : -40,
                     "legality": -20,
                     "policeDeath": 0,
                     "protestSuccess": -20
@@ -736,14 +736,14 @@ turns = [
             1: {
                 "label": "Move in with truncheons. Anyone who doesn't run gets hit",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
                 }
             },
             2: {
-                "label": "Deploy teargas to disperse them",
+                "label": "Use some teargas to scatter them",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": -10,
@@ -763,7 +763,7 @@ turns = [
             4: {
                 "label": "Things are out of control! It's time to move in - arrest them all",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -10,
+                    "peacefulProtest" : -30,
                     "legality": -20,
                     "policeDeath": 0,
                     "protestSuccess": -20
@@ -810,7 +810,7 @@ turns = [
             1: {
                 "label": "Fire rubber bullets at them",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -819,7 +819,7 @@ turns = [
             2: {
                 "label": "Deploy stun grenades to disperse them",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -35,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -876,14 +876,14 @@ turns = [
             1: {
                 "label": "Move in with truncheons. Anyone who doesn't run gets hit",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
                 }
             },
             2: {
-                "label": "Deploy teargas to disperse everyone",
+                "label": "Release some teargas to disperse everyone",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": -10,
@@ -903,7 +903,7 @@ turns = [
             4: {
                 "label": "Arrest everybody - NOW",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -10,
+                    "peacefulProtest" : -35,
                     "legality": -20,
                     "policeDeath": 0,
                     "protestSuccess": -20
@@ -913,7 +913,7 @@ turns = [
             5: {
                 "label": "Fire rubber bullets at them",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -35,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
@@ -985,7 +985,7 @@ turns = [
 
     {
         "context": {
-            "text" : "You are moved to a part of the protest that is quieter, but some protesters insulting you and accuse the police of being too violent.",
+            "text" : "You are moved to a part of the protest that is quieter, but some protesters are insulting you and chanting that police brutality "must fall".",
             "media" : {
                 "type": " ",
                 "url": " "
@@ -1012,7 +1012,7 @@ turns = [
             2: {
                 "label": "Deploy stun grenades to disperse them",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
+                    "peacefulProtest" : -40,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
