@@ -20,10 +20,10 @@ initialTurn = {
 turns = [
     {
         "context": {
-            "text" : "You are a member of a Public Order Policing unit deployed to a protest in Cape Town. You have a 9mm handgun with 9mm ammunition and a 12-gauge shotgun with blue double ball and white reduced rounds, and you’ve also got access to stun grenades, pepper spray, a water canon and your commander is nearby. The protesters are not your enemy. \n\nYour instructions are to use minimum force but hey, it’s not always so easy.",
+            "text" : "You are a member of a Public Order Policing unit deployed to a protest in Cape Town. \n\nYou have a baton, a shield, and a shotgun with rubber bullets. You also get stun grenades and pepper spray, and your commander is nearby.\n\n The protesters are not your enemy. Your instructions are to use minimum force, but hey, it’s not always so easy.",
             "media" : {
                 "type": "image",
-                "url": "media/police-disperce-tuition-protesters-1.jpg"
+                "url": "media/Illegal-protest.jpg"
             }
         },
         "triggerLimits": {
@@ -285,7 +285,7 @@ turns = [
             "text" : "Wait! This is an illegal protest in terms of the Regulation of Gatherings Act",
             "media" : {
                 "type": "image",
-                "url": "media/illegal-protest.jpg"
+                "url": "media/Illegal-protest.jpg"
             }
         },
         "triggerLimits": {
