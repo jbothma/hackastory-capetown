@@ -29,7 +29,7 @@ engine = {
             vitals: {
                 protestSuccess: {
                     cmp: "gte",
-                    value: 100,
+                    value: 60,
                     win: true,
                     explanation: "Well done! <br>Despite some chaos, the protest has concluded successfully and you managed to avoid major violence and chaos. Your conduct was more or less in line with <a href=\"ni_4.pdf\">the regulations on police conduct.</a>"
                 },
