@@ -1,15 +1,15 @@
 initialTurn = {
     "context": {
-        "text" : "Question nr 1",
+        "text" : "A large group of protesters comes around the corner and heads right for you!",
         "media" : {
             "type": "image",
-            "url": "media/1.png"
+            "url": "media/police-disperce-tuition-protesters-1.jpg"
         }
     },
     "triggerLimits": [],
     "options": {
         1: {
-            "label": "1-1",
+            "label": "Fire rubber bullets at them",
             "vitalsDeltas": {
                 "peacefulProtest" : -25,
                 "legality": -25,
@@ -17,7 +17,7 @@ initialTurn = {
             }
         },
         2: {
-            "label": "1-2",
+            "label": "Deploy stun grenades to disperse them",
             "vitalsDeltas": {
                 "peacefulProtest" : -25,
                 "legality": -25,
@@ -26,7 +26,7 @@ initialTurn = {
             }
         },
         3: {
-            "label": "1-3",
+            "label": "Keep your distance and monitor the situation",
             "vitalsDeltas": {
                 "peacefulProtest" : 10,
                 "legality": 0,
@@ -35,7 +35,7 @@ initialTurn = {
             }
         },
         4: {
-            "label": "1-4",
+            "label": "Move in closely so that they know you are watching and make sure they see that you are armed",
             "vitalsDeltas": {
                 "peacefulProtest" : 0,
                 "legality": -10,
@@ -44,200 +44,706 @@ initialTurn = {
             }
         }
     }
-}
+};
 
 turns = [
+
     {
         "context": {
-            "text": "Question nr 2",
-            "media": {
-                "type": "image",
-                "url": "media/2.png"
-            }
-        },
-        "triggerLimits": {},
-        "options": {
-            1: {
-                "label": "2-1",
-                "vitalsDeltas": {
-                    "peacefulProtest": -25,
-                    "legality": -25,
-                    "policeDeath": 0
-                }
-            },
-            2: {
-                "label": "2-2",
-                "vitalsDeltas": {
-                    "peacefulProtest": -25,
-                    "legality": -25,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
-                }
-            },
-            3: {
-                "label": "2-3",
-                "vitalsDeltas": {
-                    "peacefulProtest": 10,
-                    "legality": 0,
-                    "policeDeath": 0,
-                    "protestSuccess": 20
-                }
-            },
-            4: {
-                "label": "2-4",
-                "vitalsDeltas": {
-                    "peacefulProtest": 0,
-                    "legality": -10,
-                    "policeDeath": 0,
-                    "protestSuccess": 5
-                }
-            }
-        }
-    },
-    {
-        "context": {
-            "text": "Question nr 3",
-            "media": {
-                "type": "image",
-                "url": "media/3.png"
-            }
-        },
-        "triggerLimits": {
-            "peacefulProtest": {
-                "min": 0,
-                "max": 50
-            }
-        },
-        "options": {
-            1: {
-                "label": "3-1",
-                "vitalsDeltas": {
-                    "peacefulProtest": -25,
-                    "legality": -25,
-                    "policeDeath": 0
-                }
-            },
-            2: {
-                "label": "3-2",
-                "vitalsDeltas": {
-                    "peacefulProtest": -25,
-                    "legality": -25,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
-                }
-            },
-            3: {
-                "label": "3-3",
-                "vitalsDeltas": {
-                    "peacefulProtest": 10,
-                    "legality": 0,
-                    "policeDeath": 0,
-                    "protestSuccess": 20
-                }
-            },
-            4: {
-                "label": "3-4",
-                "vitalsDeltas": {
-                    "peacefulProtest": 0,
-                    "legality": -10,
-                    "policeDeath": 0,
-                    "protestSuccess": 5
-                }
-            }
-        }
-    },
-    {
-        "context": {
-            "text": "Question nr 4",
-            "media": {
-                "type": "image",
-                "url": "media/4.jpg"
+            "text" : "The protesters reach the councillor's office... but he's no-show! People start getting angry and suddenly some bins are on fire.",
+            "media" : {
+                "type": "youtube",
+                "url": "https://www.youtube.com/embed/zuJYCwMtIAc"
             }
         },
         "triggerLimits": [],
         "options": {
             1: {
-                "label": "4-1",
+                "label": "Fire rubber bullets at them",
                 "vitalsDeltas": {
-                    "peacefulProtest": -25,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0
                 }
             },
             2: {
-                "label": "4-2",
+                "label": "Deploy stun grenades to disperse them",
                 "vitalsDeltas": {
-                    "peacefulProtest": -25,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
                 }
             },
             3: {
-                "label": "4-3",
+                "label": "Keep your distance and monitor the situation",
                 "vitalsDeltas": {
-                    "peacefulProtest": 10,
+                    "peacefulProtest" : 5,
                     "legality": 0,
                     "policeDeath": 0,
-                    "protestSuccess": 20
+                    "protestSuccess": 10
                 }
             },
             4: {
-                "label": "4-4",
+                "label": "Try to identify some of the leaders and negotiate with them to stop the burning of the bins",
                 "vitalsDeltas": {
-                    "peacefulProtest": 0,
-                    "legality": -10,
+                    "peacefulProtest" : 10,
+                    "legality": 0,
                     "policeDeath": 0,
-                    "protestSuccess": 5
+                    "protestSuccess": 20
                 }
             }
         }
     },
     {
         "context": {
-            "text": "Question nr 5",
-            "media": {
+            "text" : "The protesters reach the councillor's office... but he's no-show! People start getting angry and suddenly some bins are on fire.",
+            "media" : {
                 "type": "image",
-                "url": "media/5.png"
+                "url": "media/lion.jpg"
             }
         },
         "triggerLimits": [],
         "options": {
             1: {
-                "label": "5-1",
+                "label": "Fire rubber bullets at them",
                 "vitalsDeltas": {
-                    "peacefulProtest": -25,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0
                 }
             },
             2: {
-                "label": "5-2",
+                "label": "Deploy stun grenades to disperse them",
                 "vitalsDeltas": {
-                    "peacefulProtest": -25,
+                    "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
                 }
             },
             3: {
-                "label": "5-3",
+                "label": "Keep your distance and monitor the situation",
                 "vitalsDeltas": {
-                    "peacefulProtest": 10,
+                    "peacefulProtest" : 5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Try to identify some of the leaders and negotiate with them to stop the burning of the bins",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "A bunch of protesters split away and start moving back to the train station",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Stop them and turn them back. They didn't get permission to disperse early",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -15,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -5
+                }
+            },
+            2: {
+                "label": "Demand that the protest leaders keep them in formation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -5,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "Wait! This is an illegal protest in terms of the Regulation of Gatherings Act",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "There are way more people that what the protest organisers agreed to.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
+                }
+            },
+            4: {
+                "label": "Cordon off a section of the crowd and move them somewhere else",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "People are now burning tyres. There is smoke rising in the air and they're singing",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 20
                 }
             },
             4: {
-                "label": "5-4",
+                "label": "Isolate the agitators from the rest of the crowd",
                 "vitalsDeltas": {
-                    "peacefulProtest": 0,
+                    "peacefulProtest" : -10,
                     "legality": -10,
                     "policeDeath": 0,
-                    "protestSuccess": 5
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "Someone's looting a trader!",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Isolate the agitators and arrest them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "Your tactics worked! But a group of disruptors has just arrived and calling for people to attack the police.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Isolate the agitators from the rest of the crowd",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "The crowd is getting angrier and advancing. They look aggressive.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Try negotiate with the leaders or try divert the march to another location",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            },
+            4: {
+                "label": "Issue a warning to the crowd that you will take action against them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "The protesters react angrily and now there are clashes between protesters and police",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Open fire!",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 1,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Deploy teargas to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Isolate the agitators and arrest them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            },
+            5: {
+                "label": "Arrest everybody - NOW",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -20,
+                    "policeDeath": 0,
+                    "protestSuccess": -20
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "Your tactics haven't worked. Disrupters try to set the councillor's office on fire.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Move in with truncheons. Anyone who doesn't run gets hit",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy teargas to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Isolate the agitators and arrest them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            },
+            4: {
+                "label": "Arrest everybody - NOW",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -20,
+                    "policeDeath": 0,
+                    "protestSuccess": -20
+                }
+            },
+            5: {
+                "label": "Issue a warning to the crowd that you will take action against them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "Your tactics haven't worked. Disrupters are now brandishing stones.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            2: {
+                "label": "Deploy stun grenades to disperse them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Isolate the agitators from the rest of the crowd",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+
+                }
+            },
+            4: {
+                "label": "Issue a warning to the crowd that you will take action against them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "Your tactics have worked. But one of them throws a stone at you.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Move in with truncheons. Anyone who doesn't run gets hit",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "Deploy teargas to disperse everyone",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Isolate the agitator and arrest them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            },
+            4: {
+                "label": "Arrest everybody - NOW",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -20,
+                    "policeDeath": 0,
+                    "protestSuccess": -20
+                }
+            },
+
+            5: {
+                "label": "Fire rubber bullets at them",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            }
+        }
+    },
+
+    {
+        "context": {
+            "text" : "One of the protesters comes within arm's reach of you and he's photographing you.",
+            "media" : {
+                "type": "image",
+                "url": "media/lion.jpg"
+            }
+        },
+        "triggerLimits": [],
+        "options": {
+            1: {
+                "label": "Arrest him",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            2: {
+                "label": "Just push him away",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            3: {
+                "label": "Just get him to delete the pictures and move on",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 0,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Take no action",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
                 }
             }
         }
     }
-    ]
+];

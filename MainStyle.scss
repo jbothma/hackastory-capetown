@@ -22,10 +22,6 @@ html, main, body, section, article, figure, figcaption, ol {
   box-sizing: border-box;
 }
 
-html, body {
-  background-color: #ccc !important;
-}
-
 body {
   font: 100% $font-stack-regular;
   color: $primary-color;
@@ -34,16 +30,51 @@ body {
 
 main {
   position: absolute;
+  top: 0;
   left: 100%;
   transition: left 0.5s ease;
-  border: 1em solid transparent;
 }
 
-section {
+h1 {
+  font-size: $font-size-bigger;
+}
+
+.question {
+  z-index: -999;
+  background-size: cover;
+
+  .videoContainer {
+    visibility: hidden;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+
+    iframe {
+      height: 100%;
+    }
+  }
+
+  p {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0px 0px 6px #000;
+
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em;
+  }
+}
+
+.answer, .gameOver {
+
   background-color: #fff;
   border-radius: 10px;
-  margin-bottom: 1em;
-  box-shadow: -2px 2px 2px #bbb;
+  width: 95%;
+  margin: auto;
 
   header {
     border-radius: 10px 10px 0 0;
@@ -67,6 +98,10 @@ section {
 
   &.answer header:before {
     content: "!";
+  }
+
+  &.gameOver header:before {
+    content: "X";
   }
 
   article {

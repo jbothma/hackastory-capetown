@@ -38,7 +38,8 @@
             });
 
         var $qText = $newCard.find('.questionText');
-        var $qMedia = $newCard.find('.questionMedia');
+        var $qContainer = $newCard.find('.question');
+        var $qVideo = $qContainer.find('.videoContainer');
         var $aList = $newCard.find('.answerList');
         // SET DESCRIPTION TEXT
 
@@ -47,13 +48,19 @@
 
         // SET DESCRIPTION MEDIA
 
-        $qMedia.empty();
-
         if (typeof(context.media) !== 'undefined')
-            if (context.media.type === "image")
-                $qMedia.append(
-                    $('<img>').attr('src',context.media.url)
-                );
+            switch (context.media.type) {
+                case "image" :
+                    $qContainer.css('background-image','url('+ context.media.url +')');
+                    $qVideo.css('visibility','hidden');
+                    break;
+                case "youtube" :
+                    $qContainer.css('background-image','url(media/police-vague.jpg)');
+                    $qVideo.empty().append(
+                        $('<iframe>').attr('src', context.media.url)
+                    ).css('visibility','visible');
+                    break;
+            }
 
         // SET ANSWERS
 
@@ -78,17 +85,29 @@
     }
 
     function endGame(vitals){
-        var $endCard = $('<main>')
-            .addClass('gameOver')
-            .append( $('<section>')
-                .append( $('<header>').html('Thank you for playing!'))
-                .append( $('<article>').html(makeEndText(vitals)))
+        $('#mainCard').css('position','absolute')
+            .transition({left: '-100%'}, 500, function() {
+                $('#mainCard').remove();
+            });
 
+        var $endCard = $('<main>')
+            .appendTo( $('body') )
+            .append( $('<section>')
+                .addClass('question')
+                .css('background-image','url(media/police-disperce-tuition-protesters-3.jpg)')
+                .append( $('<div>')
+                    .addClass('videoContainer')
+                )
+                .append( $('<section>')
+                    .addClass('gameOver')
+                    .append( $('<header>').html('Thank you for playing!'))
+                    .append( $('<article>').html(makeEndText(vitals)))
+                )
             )
             .transition({left: '0'}, 500, function() {
-                $('#mainCard').remove();
-            })
-            .appendTo( $('body') );
+
+            });
+
     }
 
     function makeEndText(vitals){
@@ -112,9 +131,15 @@
             txt += "<h1>You've lost!</h1>";
         }
 
-        txt += "<p>Your score is:</p>";
-        txt += vitals.peacefulProtest.value + " peacefulProtest<br>";
-        txt += vitals.protestSuccess.value + " protestSuccess<br>";
+        txt += "Your score is:<br>";
+        txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
+        //txt += vitals.protestSuccess.value + " protestSuccess<br>";
+
+        txt += "Made for <br><img src='media/logo-circle.png' style='width: 75%'>"
+        txt += "<br>Hackastory Capetown 2016";
+        txt += "<br><br>by people";
+        txt += "<br>who have names";
+        txt += "<br>which will be listed here";
 
         return txt;
 

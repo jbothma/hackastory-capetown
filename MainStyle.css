@@ -202,9 +202,6 @@ html, main, body, section, article, figure, figcaption, ol {
   width: 100%;
   box-sizing: border-box; }
 
-html, body {
-  background-color: #ccc !important; }
-
 body {
   font: 100% FiraSans-Regular, Helvetica, sans-serif;
   color: #333;
@@ -212,52 +209,74 @@ body {
 
 main {
   position: absolute;
+  top: 0;
   left: 100%;
-  transition: left 0.5s ease;
-  border: 1em solid transparent; }
+  transition: left 0.5s ease; }
 
-section {
+h1 {
+  font-size: 1.5rem; }
+
+.question {
+  z-index: -999;
+  background-size: cover; }
+  .question .videoContainer {
+    visibility: hidden;
+    height: 200px;
+    width: 100%;
+    text-align: center; }
+    .question .videoContainer iframe {
+      height: 100%; }
+  .question p {
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 6px #000;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em; }
+
+.answer, .gameOver {
   background-color: #fff;
   border-radius: 10px;
-  margin-bottom: 1em;
-  box-shadow: -2px 2px 2px #bbb; }
-  section header {
+  width: 95%;
+  margin: auto; }
+  .answer header, .gameOver header {
     border-radius: 10px 10px 0 0;
     padding: 1rem;
     padding-right: 1em;
     color: #fff;
     background-color: #31409d;
     font-family: FiraSans-ExtraBold, Helvetica, sans-serif; }
-    section header:before {
+    .answer header:before, .gameOver header:before {
       padding-right: 0.5em;
       font-size: 1.5rem;
       vertical-align: middle; }
-  section.question header:before {
+  .answer.question header:before, .gameOver.question header:before {
     content: "?"; }
-  section.answer header:before {
+  .answer.answer header:before, .gameOver.answer header:before {
     content: "!"; }
-  section article {
+  .answer.gameOver header:before, .gameOver.gameOver header:before {
+    content: "X"; }
+  .answer article, .gameOver article {
     padding: 1em; }
-  section .questionMedia {
+  .answer .questionMedia, .gameOver .questionMedia {
     text-align: center;
     padding-bottom: 1em; }
-    section .questionMedia img {
+    .answer .questionMedia img, .gameOver .questionMedia img {
       height: 300px;
       max-width: 100%; }
-    section .questionMedia figcaption {
+    .answer .questionMedia figcaption, .gameOver .questionMedia figcaption {
       font-style: italic;
       text-align: center;
       padding: 1em 0em; }
-  section .answerList {
+  .answer .answerList, .gameOver .answerList {
     list-style-type: none;
     counter-reset: ol-counter; }
-    section .answerList li {
+    .answer .answerList li, .gameOver .answerList li {
       position: relative;
       padding-left: 5em;
       padding-bottom: 1em;
       min-height: 5em;
       cursor: pointer; }
-    section .answerList li:before {
+    .answer .answerList li:before, .gameOver .answerList li:before {
       content: counter(ol-counter,upper-alpha);
       counter-increment: ol-counter;
       text-align: center;
