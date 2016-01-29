@@ -66,15 +66,15 @@ turns = [
             }
         },
         "triggerLimits": {
-        "peacefulProtest": {
-            "min": 50,
-            "max": 100
+            "peacefulProtest": {
+                "min": 50,
+                "max": 100
+            },
+            "protestSuccess": {
+                "min": 0,
+                "max": 30
+            }
         },
-         "protestSuccess": {
-            "min": 0,
-            "max": 30
-        }
-    },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -122,19 +122,19 @@ turns = [
             }
         },
         "triggerLimits": {
-        "peacefulProtest": {
-            "min": 0,
-            "max": 50
+            "peacefulProtest": {
+                "min": 0,
+                "max": 50
+            },
+            "protestSuccess": {
+                "min": 70,
+                "max": 100
+            },
+            "legality": {
+                "min": 0,
+                "max": 30
+            }
         },
-         "protestSuccess": {
-            "min": 70,
-            "max": 100
-        }
-        "legality": {
-            "min": 0,
-            "max": 30
-        }
-    },
         "options": {
             1: {
                 "label": "Fire rubber bullets at them",
@@ -183,10 +183,10 @@ turns = [
             }
         },
         "triggerLimits": {
-        "protestSuccess": {
-            "min": 0,
-            "max": 30
-        }
+            "protestSuccess": {
+                "min": 0,
+                "max": 30
+            }
         },
         "options": {
             1: {
