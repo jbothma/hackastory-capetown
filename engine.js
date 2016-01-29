@@ -5,7 +5,8 @@ engine = {
             peacefulProtest : 100,
             legality: 100,
             policeDeath: 0,
-            protestSuccess: 0
+            protestSuccess: 0,
+            negotiations: 0
         },
         previousTurn: null,
         turn: initialTurn,
