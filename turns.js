@@ -987,8 +987,8 @@ turns = [
         "context": {
             "text" : "You are moved to a part of the protest that is quieter, but some protesters are insulting you and chanting that police brutality \"must fall\".",
             "media" : {
-                "type": " ",
-                "url": " "
+                "type": "image",
+                "url": "media/feesmustfall.jpg"
             }
         },
         "triggerLimits": {
@@ -1042,8 +1042,8 @@ turns = [
         "context": {
             "text" : "The crowd quietens for a while and keeps moving.",
             "media" : {
-                "type": " ",
-                "url": " "
+                "type": "image",
+                "url": "media/ordered.jpg"
             }
         },
         "triggerLimits": {
@@ -1095,8 +1095,8 @@ turns = [
         "context": {
             "text" : "The crowd moves on while singing songs loudly and showing protest posters to observers.",
             "media" : {
-                "type": " ",
-                "url": " "
+                "type": "image",
+                "url": "media/hands.jpg"
             }
         },
         "triggerLimits": {
