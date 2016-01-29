@@ -1,62 +1,98 @@
 initialTurn = {
     "context": {
-        "text" : "You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
+        "text" : "Welcome to South Africa, the protest capital of the world. It’s not exactly a picnic for people who take to the streets to demand basic rights. Protests are democracy in action, but protests are also what happen when the formal processes of democracy fail. And as crowds gather in the streets, it’s the police that are supposed to facilitate protests, without too much interference.  But it doesn’t always happen that way.",
         "media" : {
             "type": "image",
             "url": "media/crowd-is-advancing.jpg"
         }
     },
-    "triggerLimits": {
-        "peacefulProtest": {
-            "min": 100,
-            "max": 1000
-        },
-        "legality": {
-            "min": 100,
-            "max": 1000
-        }
-    },
+    "triggerLimits": {},
     "options": {
         1: {
-            "label": "A crowd like this could over-run you at any point. Run away!",
+            "label": "Think you can handle it as a cop in this situation?",
             "vitalsDeltas": {
-                "peacefulProtest" : -25,
-                "legality": -25,
-                "policeDeath": 0
-            }
-        },
-        2: {
-            "label": "Keep your distance and monitor the situation",
-            "vitalsDeltas": {
-                "peacefulProtest" : 10,
-                "legality": 0,
-                "policeDeath": 0,
-                "protestSuccess": 20
-            }
-        },
-        3: {
-            "label": "Use a stun grenade to slow the march and make sure you don't get swarmed",
-            "vitalsDeltas": {
-                "peacefulProtest" : -25,
-                "legality": -25,
-                "policeDeath": 0,
-                "protestSuccess": 0
-            }
-        },
-        4: {
-            "label": "Move in closely so that they know you are watching and make sure they see that you are armed",
-            "vitalsDeltas": {
-                "peacefulProtest" : 0,
-                "legality": -10,
-                "policeDeath": 0,
-                "protestSuccess": 5
+                "intro": 1
             }
         }
     }
 };
 
 turns = [
-
+    {
+        "context": {
+            "text" : "You are a member of a Public Order Policing unit deployed to a protest in Cape Town. You have a 9mm handgun with 9mm ammunition and a 12-gauge shotgun with blue double ball and white reduced rounds, and you’ve also got access to stun grenades, pepper spray, a water canon and your commander is nearby. The protesters are not your enemy. \n\nYour instructions are to use minimum force but hey, it’s not always so easy.",
+            "media" : {
+                "type": "image",
+                "url": "media/police-disperce-tuition-protesters-1.jpg"
+            }
+        },
+        "triggerLimits": {
+            "intro": {
+                "min": 2,
+                "max": 2
+            }
+        },
+        "options": {
+            1: {
+                "label": "Tension is rising...",
+                "vitalsDeltas": {
+                    "intro": 1
+                }
+            }
+        }
+    },
+    {
+        "context": {
+            "text" : "You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Before long, a massive group of protesters comes around the corner. They're heading right for you!",
+            "media" : {
+                "type": "image",
+                "url": "media/police-disperce-tuition-protesters-1.jpg"
+            }
+        },
+        "triggerLimits": {
+            "intro": {
+                "min": 3,
+                "max": 3
+            }
+        },
+        "options": {
+            1: {
+                "label": "A crowd like this could over-run you at any point. Run away!",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0
+                }
+            },
+            2: {
+                "label": "Keep your distance and monitor the situation",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 20
+                }
+            },
+            3: {
+                "label": "Use a stun grenade to slow the march and make sure you don't get swarmed",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            4: {
+                "label": "Move in closely so that they know you are watching and make sure they see that you are armed",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 0,
+                    "legality": -10,
+                    "policeDeath": 0,
+                    "protestSuccess": 5
+                }
+            }
+        }
+    },
     {
         "context": {
             "text" : "The protesters reach the councillor's office... but he's no-show! After waiting for an hour for him to show up, people's frustration bubbles over. Suddenly some bins are on fire.",
@@ -66,6 +102,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 50,
                 "max": 1000
@@ -128,6 +168,10 @@ turns = [
             "peacefulProtest": -5
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 0,
                 "max": 50
@@ -189,6 +233,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "protestSuccess": {
                 "min": 0,
                 "max": 30
@@ -237,6 +285,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "protestSuccess": {
                 "min": 0,
                 "max": 20
@@ -294,6 +346,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "protestSuccess": {
                 "min": 0,
                 "max": 40
@@ -343,6 +399,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 20,
                 "max": 70
@@ -400,6 +460,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 20,
                 "max": 50
@@ -456,6 +520,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 50,
                 "max": 1000
@@ -516,6 +584,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 0,
                 "max": 50
@@ -576,6 +648,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 0,
                 "max": 30
@@ -636,6 +712,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 0,
                 "max": 50
@@ -706,6 +786,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 0,
                 "max": 50
@@ -768,6 +852,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "peacefulProtest": {
                 "min": 50,
                 "max": 1000
@@ -839,6 +927,10 @@ turns = [
             }
         },
         "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            },
             "legality": {
                 "min": -1000,
                 "max": 50
@@ -895,7 +987,12 @@ turns = [
                 "url": "media/protesters-around-the-corner.jpg"
             }
         },
-        "triggerLimits": {},
+        "triggerLimits": {
+            "intro": {
+                "min": 4,
+                "max": 4
+            }
+        },
         "options": {
             1: {
                 "label": "Leave them be",
