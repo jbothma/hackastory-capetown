@@ -132,6 +132,8 @@
         }
 
         txt += "Your score is:<br>";
+
+
         txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
         //txt += vitals.protestSuccess.value + " protestSuccess<br>";
 
