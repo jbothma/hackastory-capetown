@@ -1,6 +1,6 @@
 initialTurn = {
     "context": {
-        "text" : "A lekker large group of protesters comes around the corner and heads right for you!",
+        "text" : "It's the morning of a big protest. You've been deployed to a community that's been without water for weeks. Your unit has received word that thousands are marching to the Councillor's office. Nearly an hour after you deploy, you hear the first sounds of an approaching crowd. Before long, a massive group of protesters comes around the corner. There are thousands and thousands of them. They're heading right for you!",
         "media" : {
             "type": "image",
             "url": "media/police-disperce-tuition-protesters-1.jpg"
@@ -18,7 +18,7 @@ initialTurn = {
     },
     "options": {
         1: {
-            "label": "Fire rubber bullets at them",
+            "label": "A crowd like this could over-run you at any point. Run away!",
             "vitalsDeltas": {
                 "peacefulProtest" : -25,
                 "legality": -25,
@@ -26,21 +26,21 @@ initialTurn = {
             }
         },
         2: {
-            "label": "Deploy stun grenades to disperse them",
-            "vitalsDeltas": {
-                "peacefulProtest" : -25,
-                "legality": -25,
-                "policeDeath": 0,
-                "protestSuccess": 0
-            }
-        },
-        3: {
             "label": "Keep your distance and monitor the situation",
             "vitalsDeltas": {
                 "peacefulProtest" : 10,
                 "legality": 0,
                 "policeDeath": 0,
                 "protestSuccess": 20
+            }
+        },
+        3: {
+            "label": "Use a stun grenade to slow the march and make sure you don't get swarmed",
+            "vitalsDeltas": {
+                "peacefulProtest" : -25,
+                "legality": -25,
+                "policeDeath": 0,
+                "protestSuccess": 0
             }
         },
         4: {
@@ -59,7 +59,7 @@ turns = [
 
     {
         "context": {
-            "text" : "The protesters reach the councillor's office... but he's no-show! People start getting angry and suddenly some bins are on fire.",
+            "text" : "The protesters reach the councillor's office... but he's no-show! After waiting for an hour for him to show up, people's frustration bubbles over. Suddenly some bins are on fire.",
             "media" : {
                 "type": "youtube",
                 "url": "https://www.youtube.com/embed/zuJYCwMtIAc"
@@ -80,15 +80,16 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "Hang back and just see how this plays out",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
-                    "policeDeath": 0
+                    "peacefulProtest" : 5,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": 10
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "Okay, it's time for a stun grenade",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -97,12 +98,11 @@ turns = [
                 }
             },
             3: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "This can't get out of hand. Fire off some rubber bullets and move them back",
                 "vitalsDeltas": {
-                    "peacefulProtest" : 5,
-                    "legality": 0,
-                    "policeDeath": 0,
-                    "protestSuccess": 10
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0
                 }
             },
             4: {
@@ -118,7 +118,7 @@ turns = [
     },
     {
         "context": {
-            "text" : "The protesters reach the councillor's office and hand over their memorandum successfully. While some protesters start going home, others are angry at the police and start damaging the council property. ",
+            "text" : "The protesters reach the councillor's office and hand over their memorandum successfully. While some protesters start going home, others are still angry with the police and start throwing rubbish.",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -143,15 +143,7 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
-                "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
-                    "policeDeath": 0
-                }
-            },
-            2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "You need to disperse them. Deploy some stun grenades",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -159,8 +151,16 @@ turns = [
                     "protestSuccess": 0
                 }
             },
+            2: {
+                "label": "Put an end to this. Arrest everyone",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -25,
+                    "legality": -25,
+                    "policeDeath": 0
+                }
+            },
             3: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "Wait and see, this may resolve itselfn",
                 "vitalsDeltas": {
                     "peacefulProtest" : 5,
                     "legality": 0,
@@ -169,7 +169,7 @@ turns = [
                 }
             },
             4: {
-                "label": "Try to identify some of the leaders and negotiate with them.",
+                "label": "See if you can figure out who's in charge and negotiate a solution.",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
@@ -247,7 +247,16 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "Recipe for disaster. Block off the road and turn them back",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": -25,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
+                }
+            },
+            2: {
+                "label": "You need to act decisively. Turn them back with rubber bullets or stun grenades.",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -255,31 +264,22 @@ turns = [
                     "protestSuccess": -10
                 }
             },
-            2: {
-                "label": "Deploy stun grenades to disperse them",
-                "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
-                }
-            },
             3: {
-                "label": "Keep your distance and monitor the situation",
-                "vitalsDeltas": {
-                    "peacefulProtest" : -5,
-                    "legality": 0,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
-                }
-            },
-            4: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "Illegal or not, they're here now. Let's let the protest go ahead and monitor the situation.",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 20
+                }
+            },
+            4: {
+                "label": "You don't need to stop them but you do need to send a message. Move close with a line of officers and make sure they can see that you are armed",
+                "vitalsDeltas": {
+                    "peacefulProtest" : -10,
+                    "legality": 0,
+                    "policeDeath": 0,
+                    "protestSuccess": -10
                 }
             }
         }
@@ -287,7 +287,7 @@ turns = [
 
     {
         "context": {
-            "text" : "There are way more people that what the protest organisers agreed to.",
+            "text" : "There are WAY more people that what the protest organisers agreed to. You are completely out-numbered and could over-run at any point.",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -304,16 +304,16 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "Cordon off a section of the crowd and move them somewhere else",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
+                    "peacefulProtest" : -15,
+                    "legality": -15,
                     "policeDeath": 0,
                     "protestSuccess": -10
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "You need to thin out the crowd a little bit. Rubber bullets are too sever. Try a stun grenade",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -321,22 +321,14 @@ turns = [
                     "protestSuccess": 0
                 }
             },
+
             3: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "Give them space, and see how the situation unfolds",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 10
-                }
-            },
-            4: {
-                "label": "Cordon off a section of the crowd and move them somewhere else",
-                "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
-                    "policeDeath": 0,
-                    "protestSuccess": -20
                 }
             }
         }
@@ -344,7 +336,7 @@ turns = [
 
     {
         "context": {
-            "text" : "People are now burning tyres. There is smoke rising in the air and they're singing",
+            "text" : "People are now burning tyres. There is a thick cloud of smoke hanging low in the air and it stinks.",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -361,7 +353,7 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "That's destruction of property! This thing is out of hand, arrest everyone",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -370,7 +362,7 @@ turns = [
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "It's time to disperse. Give the order for stun grenades amd rubber bullets",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -379,7 +371,7 @@ turns = [
                 }
             },
             3: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "The smoke stinks but for now just hold the line",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
@@ -401,7 +393,7 @@ turns = [
 
     {
         "context": {
-            "text" : "Someone's looting a trader!",
+            "text" : "Over to the side of the march, a fight breaks out between traders and a few protesters!",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -418,21 +410,21 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "There's no time to figure out what happened, but form a cordon on that side and keep the march moving",
+                "vitalsDeltas": {
+                    "peacefulProtest" : 5,
+                    "legality": 5,
+                    "policeDeath": 0,
+                    "protestSuccess": 0
+                }
+            },
+            2: {
+                "label": "Clear the area before looting breaks out. Deploy tear gas now!",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": -10
-                }
-            },
-            2: {
-                "label": "Deploy stun grenades to disperse them",
-                "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
                 }
             },
             3: {
@@ -447,7 +439,7 @@ turns = [
             4: {
                 "label": "Isolate the agitators and arrest them",
                 "vitalsDeltas": {
-                    "peacefulProtest" : 10,
+                    "peacefulProtest" : -5,
                     "legality": 0,
                     "policeDeath": 0,
                     "protestSuccess": 20
@@ -478,16 +470,16 @@ turns = [
         },
         "options": {
             1: {
-                "label": "Fire rubber bullets at them",
+                "label": "You can't afford to start a fight now. Just hang back and let this thing play out",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -25,
-                    "legality": -25,
+                    "peacefulProtest" : -5,
+                    "legality": 0,
                     "policeDeath": 0,
-                    "protestSuccess": -10
+                    "protestSuccess": 0
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "Act decisively. Rubber bullets. Stun grenades",
                 "vitalsDeltas": {
                     "peacefulProtest" : -25,
                     "legality": -25,
@@ -496,21 +488,21 @@ turns = [
                 }
             },
             3: {
-                "label": "Keep your distance and monitor the situation",
+                "label": "Don't fire on them right now, but put your riot shotgun at the ready and make it clear you're ready to open fire",
                 "vitalsDeltas": {
-                    "peacefulProtest" : -5,
-                    "legality": 0,
+                    "peacefulProtest" : -15,
+                    "legality": -25,
                     "policeDeath": 0,
                     "protestSuccess": 0
                 }
             },
             4: {
-                "label": "Isolate the agitators from the rest of the crowd",
+                "label": "Try isolate the agitators from the rest of the crowd",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
                     "policeDeath": 0,
-                    "protestSuccess": 20
+                    "protestSuccess": 10
                 }
             }
         }
@@ -607,7 +599,7 @@ turns = [
                 }
             },
             2: {
-                "label": "Deploy stun grenades to disperse them",
+                "label": "Lob some stun grenades into the crowd and scatter them!",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
                     "legality": 0,
@@ -615,16 +607,9 @@ turns = [
                     "protestSuccess": 0
                 }
             },
-            3: {
-                "label": "Deploy teargas to disperse them",
-                "vitalsDeltas": {
-                    "peacefulProtest" : 10,
-                    "legality": -10,
-                    "policeDeath": 0,
-                    "protestSuccess": 0
-                }
+          
             },
-            4: {
+            3: {
                 "label": "Isolate the agitators and arrest them",
                 "vitalsDeltas": {
                     "peacefulProtest" : 10,
@@ -633,7 +618,7 @@ turns = [
                     "protestSuccess": 20
                 }
             },
-            5: {
+            4: {
                 "label": "Arrest everybody - NOW",
                 "vitalsDeltas": {
                     "peacefulProtest" : -10,
@@ -646,7 +631,7 @@ turns = [
     },
     {
         "context": {
-            "text" : "Your tactics haven't worked. Disrupters try to set the councillor's office on fire.",
+            "text" : "Your tactics haven't worked. Disrupters are now trying to set the councillor's office on fire.",
             "media" : {
                 "type": "image",
                 "url": "media/lion.jpg"
@@ -694,7 +679,7 @@ turns = [
                 }
             },
             4: {
-                "label": "Arrest everybody - NOW",
+                "label": "Things are out of control! It's time to move in - arrest them all",
                 "vitalsDeltas": {
                     "peacefulProtest" : -10,
                     "legality": -20,
