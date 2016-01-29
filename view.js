@@ -133,14 +133,14 @@
 
         txt += "Your score is:<br>";
 
-        if (typeof vitals.peacefulProtest.value !== 'undefined')
+        if (typeof vitals.peacefulProtest !== 'undefined')
             txt += vitals.peacefulProtest.value + " peacefulProtest<br><br>";
 
-        if (typeof vitals.protestSuccess.value !== 'undefined')
+        if (typeof vitals.protestSuccess !== 'undefined')
             txt += vitals.protestSuccess.value + " protestSuccess<br>";
 
         txt += "Made for <br><img src='media/logo-circle.png' style='width: 75%'>"
-        txt += "<br>Hackastory Capetown 2016";
+        txt += "<br><a href='https://www.hackastory.com/' target='_blank'>Hackastory Capetown 2016</a>";
         txt += "<br><br>by people";
         txt += "<br>who have names";
         txt += "<br>which will be listed here";

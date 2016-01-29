@@ -39,6 +39,11 @@ h1 {
   font-size: $font-size-bigger;
 }
 
+a {
+  border: 1px solid #31409D;
+  padding: 3px 10px;
+}
+
 .question {
   z-index: -999;
   background-size: cover;
@@ -57,10 +62,10 @@ h1 {
   p {
     color: #fff;
     text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000,
       0px 0px 6px #000;
 
     font-size: 2em;
@@ -78,7 +83,7 @@ h1 {
 
   header {
     border-radius: 10px 10px 0 0;
-    padding: 1rem;
+    padding: 1em 1em 0.5em 1em;
     padding-right: 1em;
     color: #fff;
     background-color: #31409d;
@@ -87,7 +92,7 @@ h1 {
     &:before {
       padding-right: 0.5em;
       font-size: $font-size-bigger;
-      vertical-align: middle;
+      vertical-align: -7px;
     }
 
   }
@@ -97,11 +102,15 @@ h1 {
   }
 
   &.answer header:before {
-    content: "!";
+    content: url(media/action.png);
   }
 
   &.gameOver header:before {
-    content: "X";
+    content: url(media/finish.png);
+  }
+
+  &.gameOver article {
+    text-align: center;
   }
 
   article {

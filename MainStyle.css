@@ -216,6 +216,10 @@ main {
 h1 {
   font-size: 1.5rem; }
 
+a {
+  border: 1px solid #31409D;
+  padding: 3px 10px; }
+
 .question {
   z-index: -999;
   background-size: cover; }
@@ -228,7 +232,7 @@ h1 {
       height: 100%; }
   .question p {
     color: #fff;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 0px 6px #000;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 6px #000;
     font-size: 2em;
     font-weight: bold;
     padding: 0.5em; }
@@ -240,7 +244,7 @@ h1 {
   margin: auto; }
   .answer header, .gameOver header {
     border-radius: 10px 10px 0 0;
-    padding: 1rem;
+    padding: 1em 1em 0.5em 1em;
     padding-right: 1em;
     color: #fff;
     background-color: #31409d;
@@ -248,13 +252,15 @@ h1 {
     .answer header:before, .gameOver header:before {
       padding-right: 0.5em;
       font-size: 1.5rem;
-      vertical-align: middle; }
+      vertical-align: -7px; }
   .answer.question header:before, .gameOver.question header:before {
     content: "?"; }
   .answer.answer header:before, .gameOver.answer header:before {
-    content: "!"; }
+    content: url(media/action.png); }
   .answer.gameOver header:before, .gameOver.gameOver header:before {
-    content: "X"; }
+    content: url(media/finish.png); }
+  .answer.gameOver article, .gameOver.gameOver article {
+    text-align: center; }
   .answer article, .gameOver article {
     padding: 1em; }
   .answer .questionMedia, .gameOver .questionMedia {
