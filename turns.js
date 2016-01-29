@@ -985,7 +985,7 @@ turns = [
 
     {
         "context": {
-            "text" : "You are moved to a part of the protest that is quieter, but some protesters are insulting you and chanting that police brutality "must fall".",
+            "text" : "You are moved to a part of the protest that is quieter, but some protesters are insulting you and chanting that police brutality \"must fall\".",
             "media" : {
                 "type": " ",
                 "url": " "
