@@ -35,6 +35,7 @@
                 $('#mainCard').remove();
                 $newCard.attr('id','mainCard')
                     .css('position','static');
+                handbookButton();
             });
 
         var $qText = $newCard.find('.questionText');
@@ -167,8 +168,11 @@
         $('#popover').hide();
     });
 
-    $('body').find('.showHint').on('click', function() {
-        $('#popover').show();
-    });
+    function handbookButton() {
+        $('body').find('.showHint').on('click', function () {
+            $('#popover').show();
+        });
+    }
+    handbookButton();
 
 })(engine);
